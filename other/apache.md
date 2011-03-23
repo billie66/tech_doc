@@ -1,6 +1,6 @@
-`mkdir /home/user/public_html`
-`cd  /home/user/public_html`
-`vim index.html`
+mkdir /home/user/public_html
+cd  /home/user/public_html
+vim index.html
 
 Virtual Hosts(to serve many sites using one ip address)
 
