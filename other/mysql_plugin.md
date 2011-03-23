@@ -1,12 +1,12 @@
-How to Build the QMYSQL Plugin on Unix(ubuntu9.04 + qtcreator + mysql5)
+How to Build the QMYSQL Plugin on Unix (ubuntu9.04 + qtcreator + mysql5)
 
 This article is about how to make qtcreator support mysql
 
-You need the `MySQL header files` and as well as the shared library
+You need the MySQL header files and as well as the shared library
 `libmysqlclient.so`. Depending on your Linux distribution you may need to 
 install a package which is usually called `mysql-devel`.
 
-Tell qmake where to find the `MySQL header files` and shared libraries. Here 
+Tell qmake where to find the MySQL header files and shared libraries. Here 
 it is assumed that _MySQL_ is installed in `/usr/local` and run _make_:
 
     cd $QTDIR/src/plugins/sqldrivers/mysql
