@@ -1,4 +1,4 @@
-MySQL is a widely used and fast SQL database server. It is a client/server implementation that consists of a server daemon (mysqld) and many different client programs/libraries.
+MySQL is a widely used and fast SQL database server. It is a client/server implementation that consists of a server daemon _mysqld_ and many different client programs/libraries.
 
 If you want to install Mysql database server in Ubuntu check this tutorial.
 
