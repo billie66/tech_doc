@@ -23,6 +23,38 @@ Use _file_ command to get a file type.
     billie@billie-ThinkPad:/$ file initrd.img
     initrd.img: symbolic link to `boot/initrd.img-2.6.35-28-generic'
 
+### df command
+
+check the file system disk space usage
+    
+    billie@~$ df
+    Filesystem           1K-blocks      Used Available Use% Mounted on
+    /dev/sda6             48060296   8326856  37292072  19% /
+    none                    984616       304    984312   1% /dev
+    none                    992440     20960    971480   3% /dev/shm
+    none                    992440        96    992344   1% /var/run
+    none                    992440         0    992440   0% /var/lock
+    /dev/sda7             75512952   1250540  70426508   2% /home
+    billie@~$ df /home
+    Filesystem           1K-blocks      Used Available Use% Mounted on
+    /dev/sda7             75512952   1250540  70426508   2% /home
+
+### type command
+
+type, will help you know if a command, is an alias, a built-in command or an
+independent command installed in your PC.
+
+    billie@~$ type type
+    type is a shell builtin
+    billie@~$ type -a ls
+    ls is aliased to `ls --color=auto'
+    ls is /bin/ls
+    billie@~$
+
+If the `-a` option is used, type returns all of the places that contain an
+executable named file. This includes aliases and functions, if and only if the
+`-p` option is not also used.
+        
 ### find command
 
 I want to read the source code of the _mutt_ mail client, so I need _ctags_ to
@@ -123,6 +155,38 @@ The `-l` means to list user's crontab.
 
 The `-r` means to delete user's crontab. 
 
-man 5 crontab; man 8 cron; crontab --help
+For more information in detail, you can use the commands below.
+
+    man 5 crontab; man 8 cron; crontab --help
 
 ### how to setup bash prompt
+
+When you start linux, it will enter into X mode by default. You open terminal,
+start nonlogin shell. In this mode, shell only reads its configuration file
+under home directory, which is `~/.bashrc`. So if you want to modify your bash
+prompt, you can change the value of environment variable PS1 in this file. 
+
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+
+The line above is a snippet code from `~/.bashrc`. Now, I want to change the value
+of PS1 as the following.
+
+    PS1='${debian_chroot:+($debian_chroot)}\u@\w\$ '
+    
+After deleting `\h:`, the hostname and semicolon will not display in bash prompt.
+Only saving the file is not enough, it doesn't work. Why? Because shell
+doesn't know the value of PS1 have been changed. So you have to notify the
+shell. At this time, you need to use _source_ command or '.' command to reset
+the shell execution environment.
+    
+    billie@billie-ThinkPad:~$ source ~/.bashrc 
+    billie@billie-ThinkPad:~$ . ~/.bashrc
+    billie@~$
+
+These two commands have the same effect. The shell prompt changes simpler than
+before.
+
+The other shell mode is login shell, which means you should input your usrname
+and passward when you start shell. For example, you work on console mode one
+of tty0-tty6.
+ 
