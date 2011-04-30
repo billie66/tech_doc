@@ -189,4 +189,24 @@ before.
 The other shell mode is login shell, which means you should input your usrname
 and passward when you start shell. For example, you work on console mode one
 of tty0-tty6.
- 
+
+### convert the encoding method of a given file  
+
+When open a file, maybe you see the file messed up with a lot of odd symbols. This means
+your system wide locale native encoding don't support the encoding of the file. So using `iconv` command, 
+convert encoding of given files from one encoding to another. For example, there is a file written
+in traditional Chinese encoded by `big5` encoding type. But I can't view this file. Then
+I need to covert the encoding of this file from `big5` to `utf8`.
+
+    iconv -f big5 -t utf8 oldfile -o newfile
+
+If covert a file from traditional utf8 encoding to simplified utf8 encoding,
+which is a little complex.
+
+    iconv -f utf8 -t big5 oldfile | iconv -f big5 -t gb2312 | iconv -f gb2312 -t utf8 -o newfile 
+
+So, first you should figure out what a file encoding type is, you can use the
+following command.
+    
+    file -bi filename
+
