@@ -1,40 +1,19 @@
-### Install chinese-input method in ubuntu(original language is english)
+### Install chinese-input method in ubuntu 10.10(original locale is english)
 
-1. remove scim package
+1. install scim package
 
-   `sudo apt-get --purge remove scim`
+   sudo apt-get install scim
 
-2. install fcitx package
+2. install scim-pinyin input method 
+    
+    sudo apt-get install scim-pinyin
 
-	`sudo apt-get install im-switch fcitx`
-
-    `im-switch -s fcitx -z default`
-
-3. edit a file named 95input
-
-	sudo vim /etc/X11/Xsession.d/95input
-	sudo chmod +x /etc/X11/Xsession.d/95input
-
-4. install chinese support 
-
-	system-Administration manage-language support-chinese
-
-5. reboot OS
-
-you can input chinese with scim but not fcitx disappearing toolbox icon only
-
-### Install chinese input in ubuntu (chinese)
-
-1. install locale package
+3. install locale package
 
 	sudo apt-get install language-pack-zh
 	sudo apt-get install language-support-zh
 
-2. install fcitx
+4. reboot OS
 
-	sudo apt-get install fcitx
-
-3. reboot OS
-
-You can use scim chinese input but not fcitx 
+You can use scim chinese input method.
 	
