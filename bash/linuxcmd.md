@@ -109,8 +109,7 @@ In additional, if you want to omit some files in a subdirectory, you can use
 the command below. I use _mutt_ repository as an example. 
 
     dir=~/mutt-1.5.21
-    find $dir -path "$dir/m4" -prune -o -path "$dir/doc" -prune -o -name \
-    "*.[ch]" | xargs ctags 
+    find $dir -path "$dir/m4" -prune -o -path "$dir/doc" -prune -o -name "*.[ch]" | xargs ctags 
 
 In the above command, it omit the files in two directories, `m4` and `doc`.
 
