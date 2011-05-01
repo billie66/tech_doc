@@ -26,3 +26,8 @@ locale native encoding automatically, the old file will disappear.
 
     recode big5 oldfile 
 
+### locale in ubuntu
+
+List all the available locales in your system, use `locale -a`. You can go to
+directory `/usr/share/locales` to install specified language package.Then run
+`dpkg-reconfigure locales`. 
