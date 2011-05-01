@@ -55,6 +55,14 @@ If the `-a` option is used, type returns all of the places that contain an
 executable named file. This includes aliases and functions, if and only if the
 `-p` option is not also used.
         
+### tr command
+    
+Convert doc text file to unix.
+
+    tr "\r" " " <doc >temp
+    sed -n "s/ $//p" <temp >unix
+    rm temp 
+    
 ### how to check the version of ubuntu installed
 
     billie@~$ lsb_release -a
