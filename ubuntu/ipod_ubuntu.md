@@ -29,4 +29,7 @@ more function.
 You can get much more information from a good site about ubuntu, [ubuntu
 guide][1].
 
+Now, I prefer gtkpod than Rhythmbox. Rhythmbox is a little strange, it will
+create many folders in ipod. 
+
 [1]: http://ubuntuguide.net/get-ipod-touchipad-recognized-sync-with-gtkpod-in-ubuntu-10-1010-04
