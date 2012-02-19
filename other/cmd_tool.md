@@ -47,6 +47,23 @@ check file's type
 
     file filename
 
+dd command
+
+To make an ISO from your CD/DVD, place the media in your drive but do not
+mount it. If it automounts, unmount it. 
+
+    dd if=/dev/dvd of=dvd.iso # for dvd 
+    dd if=/dev/cdrom of=cd.iso # for cdrom 
+    dd if=/dev/scd0 of=cd.iso # if cdrom is scsi 
+
+To make an ISO from files on your hard drive, create a directory which holds
+the files you want. Then use the mkisofs command. 
+
+    mkisofs -o /tmp/cd.iso /tmp/directory/ 
+
+This results in a file called cd.iso in folder /tmp which contains all the
+files and directories in /tmp/directory/. 
+
 [1]: http://www.linuxtutorialblog.com/post/introduction-using-diff-and-patch-tutorial
 
 

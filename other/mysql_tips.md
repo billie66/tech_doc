@@ -17,16 +17,20 @@ create a database:
 
     mysql> create database databasename;
 
-This means to delete the existed database.
+delete the existed database.
 
     mysql> drop datebase databasename;||drop schema databasename;
 
 create tables:
 
     mysql> show databases;
-    mysql> use datebase;
+    mysql> use dbname;
     mysql> show tables;
     mysql> create table tablename();
+
+describe table:
+
+    mysql> describe tablename;
 
 For example:
 
