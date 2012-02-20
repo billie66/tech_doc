@@ -7,4 +7,18 @@ over it. So this will ease text copying and pasting.
 
     System->windows->select windows when the mouse moves over them
 
-### cron and at 
+### how to check the bits of OS
+
+    uname -a
+    
+For example i[3456]86 are 32-bit, while X86\_64 is 64-bit.
+
+### how to see whether the cpu is 32-bit or 64-bit
+
+    grep '^flag *:.*\blm\b' /proc/cpuinfo
+    
+The "lm" refers to "long mode".
+
+### make a bootable usb stick 
+
+    System->Administration->Startup Disk Creator 

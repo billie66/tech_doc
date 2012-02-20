@@ -8,7 +8,7 @@ not detect any wireless signal. Then I asked google to help me. Luckily, I
 fixed the problem finally. 
 
 It was so simple that I just needed to turn on my wireless hardware switch, which
-locateed on the keyboard, press F11 to turn it on. Now, I could access wireless network. 
+located on the keyboard, press F11 to turn it on. Now, I could access wireless network. 
 
 First of all, You should use the command `sudo lshw -C network` to check the state of 
 your wireless network. Then According to the output of the command, you would
