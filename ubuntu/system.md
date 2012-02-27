@@ -15,9 +15,10 @@ For example i[3456]86 are 32-bit, while X86\_64 is 64-bit.
 
 ### how to see whether the cpu is 32-bit or 64-bit
 
-    grep '^flag *:.*\blm\b' /proc/cpuinfo
+    grep --color=always -iw lm /proc/cpuinfo
     
-The "lm" refers to "long mode".
+If this command returns "lm" (Long Mode), then your processor is capable of
+64-bit. 
 
 ### make a bootable usb stick 
 

@@ -18,3 +18,21 @@ In addition, ubuntu documentation, [wireless troubleshooting][1] helped me a lot
 should read it first when you meet a problem about wireless network. Hoped it will help you.
 
 [1]:https://help.ubuntu.com/10.10/internet/C/troubleshooting-wireless.html#troubleshooting-wireless-disabled 
+### bcm4312 wireless driver for linux
+
+    System->Adminitration->Synaptic Package Manager
+
+Then search 'bcm43', get a package named __bcmwl-kernel-source__, which
+contains Broadcom 802.11 Linux STA wireless driver.
+
+You can also get the bcm4312 driver package from the offical website of
+Broadcom corporation.
+    
+    http://www.broadcom.com/support/802.11/linux_sta.php
+
+A website for drivers:
+    
+    http://www.x-drivers.com/wireless_networks/
+
+### commands for network information 
+
