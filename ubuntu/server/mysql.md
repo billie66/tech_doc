@@ -20,8 +20,13 @@
 
 ### Change mysql root password
 
-* mysqladmin -u root -p'old\_password' password new\_password
+     mysqladmin -u root -p'old\_password' password new\_password
 
 To setup root password for the first time, then use following command:
 
-* mysqladmin -u root password new\_password
+     mysqladmin -u root password new\_password
+
+### import data to database
+
+    mysql -uroot ec_development<ec_development.sql
+

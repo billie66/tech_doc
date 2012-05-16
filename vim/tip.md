@@ -27,3 +27,17 @@ current paragraph. So you'd do this:
 
 To format the current paragraph use: __gqap__
 
+#### cancle the syntax highlighting of html element a 
+
+    cp /usr/share/vim/vim73/syntax/html.vim ~/.vim/syntax/
+    vim ~/.vim/syntax/html.vim
+
+After open the file html.vim, find the following line:
+    
+    HtmlHiLink htmlLink                    Underlined
+
+then use double-quote to comment the line above, which will be disabled
+completely. But this don't take effect with my vim. So I replace Underlined
+with italic. 
+
+
