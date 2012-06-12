@@ -44,7 +44,7 @@ be fewer.  So, here we do like this:
     
     git gc --aggressive --prune=now
 
-More details to check `git filter-branch --help` manual page, and [information on github][1].
+More details to check [Filter-Branch][1], and [Advanced Git][2].
 
 ### Move one git repo to another
 
@@ -59,5 +59,8 @@ its content to another git repo called `repob`, and keep all commit history of
 
 With these steps above, `repob` could get all the files of `newrepo` repository.
 
-[1]:https://github.com/matthewmccullough/git-workshop/blob/master/workbook/markdown/27-Filter-Branch.md
+Linus Torvald's "[The coolest merge, EVER!][3]" is also about this topic.
 
+[1]:https://github.com/matthewmccullough/git-workshop/blob/master/workbook/markdown/27-Filter-Branch.md
+[2]:https://help.github.com/articles/splitting-a-subpath-out-into-a-new-repo
+[3]:http://thread.gmane.org/gmane.comp.version-control.git/5126/
