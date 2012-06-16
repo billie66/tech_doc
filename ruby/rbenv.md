@@ -21,17 +21,17 @@
 
         $ exec $SHELL
 
-5. Install `ruby-build`
+5. The [ruby-build](https://github.com/sstephenson/ruby-build) project
+   provides an `rbenv install` command that simplifies the process of
+   installing new Ruby versions to:
+
+        $ rbenv install 1.9.2-p290
+
+        Install `ruby-build`:
 
         $ mkdir -p ~/.rbenv/plugins
         $ cd ~/.rbenv/plugins
         $ git clone git://github.com/sstephenson/ruby-build.git
-
-The [ruby-build](https://github.com/sstephenson/ruby-build) project
-provides an `rbenv install` command that simplifies the process of
-installing new Ruby versions to:
-
-        $ rbenv install 1.9.2-p290
 
 6. Rebuild the shim binaries. You should do this any time you install
    a new Ruby binary (for example, when installing a new Ruby version,
