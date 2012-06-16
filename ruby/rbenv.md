@@ -4,40 +4,40 @@
 
 1. Check out rbenv into `~/.rbenv`.
 
-    $ cd
-    $ git clone git://github.com/sstephenson/rbenv.git .rbenv
+        $ cd
+        $ git clone git://github.com/sstephenson/rbenv.git .rbenv
 
 2. Add `~/.rbenv/bin` to your `$PATH` for access to the `rbenv`
    command-line utility.
 
-    $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+        $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 
 3. Add rbenv init to your shell to enable shims and autocompletion.
 
-    $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+        $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 4. Restart your shell so the path changes take effect. You can now
    begin using rbenv.
 
-    $ exec $SHELL
+        $ exec $SHELL
 
 5. Install `ruby-build`
 
-    $ mkdir -p ~/.rbenv/plugins
-    $ cd ~/.rbenv/plugins
-    $ git clone git://github.com/sstephenson/ruby-build.git
+        $ mkdir -p ~/.rbenv/plugins
+        $ cd ~/.rbenv/plugins
+        $ git clone git://github.com/sstephenson/ruby-build.git
 
 The [ruby-build](https://github.com/sstephenson/ruby-build) project
 provides an `rbenv install` command that simplifies the process of
 installing new Ruby versions to:
 
-    $ rbenv install 1.9.2-p290
+        $ rbenv install 1.9.2-p290
 
 6. Rebuild the shim binaries. You should do this any time you install
    a new Ruby binary (for example, when installing a new Ruby version,
    or when installing a gem that provides a binary).
 
-    $ rbenv rehash
+        $ rbenv rehash
 
 ### Usage
 
