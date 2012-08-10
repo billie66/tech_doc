@@ -27,17 +27,17 @@
 
         $ rbenv install 1.9.2-p290
 
-        Install `ruby-build`:
-
-        $ mkdir -p ~/.rbenv/plugins
-        $ cd ~/.rbenv/plugins
-        $ git clone git://github.com/sstephenson/ruby-build.git
-
 6. Rebuild the shim binaries. You should do this any time you install
    a new Ruby binary (for example, when installing a new Ruby version,
    or when installing a gem that provides a binary).
 
         $ rbenv rehash
+
+Note: Install `ruby-build`, do as follows:
+
+    $ mkdir -p ~/.rbenv/plugins
+    $ cd ~/.rbenv/plugins
+    $ git clone git://github.com/sstephenson/ruby-build.git
 
 ### Usage
 

@@ -75,6 +75,12 @@ Convert doc text file to unix.
 
 Also, you can view the file `/etc/lsb-release`, or through `system->about ubuntu`
 
+### ctags usage
+
+Track codebase written in ruby, use `ctags` like this:
+
+    ctags -R --exclude="*.js" . ~/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1
+
 ### find command
 
 I want to read the source code of the _mutt_ mail client, so I need _ctags_ to
