@@ -23,3 +23,17 @@ If this command returns "lm" (Long Mode), then your processor is capable of
 ### make a bootable usb stick 
 
     System->Administration->Startup Disk Creator 
+
+### list all the users
+
+    lastlog
+
+### check what ports are open 
+
+    nmap -sS -O 127.0.0.1
+
+or:
+    
+    netstat -ntulp
+
+

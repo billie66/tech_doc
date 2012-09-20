@@ -41,3 +41,6 @@ completely. But this don't take effect with my vim. So I replace Underlined
 with italic. 
 
 
+#### .vimrc 
+    
+    runtime vimrc

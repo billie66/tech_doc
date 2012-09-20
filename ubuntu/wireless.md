@@ -17,7 +17,6 @@ know the reason why your wireless network is not available.
 In addition, ubuntu documentation, [wireless troubleshooting][1] helped me a lot. You 
 should read it first when you meet a problem about wireless network. Hoped it will help you.
 
-[1]:https://help.ubuntu.com/10.10/internet/C/troubleshooting-wireless.html#troubleshooting-wireless-disabled 
 ### bcm4312 wireless driver for linux
 
     System->Adminitration->Synaptic Package Manager
@@ -36,3 +35,11 @@ A website for drivers:
 
 ### commands for network information 
 
+### add Network Manager icon to the panel
+
+Move the cursor to the panel, then right click on the mouse, select _Add to
+Panel..._, search _Notification Area_, then add the item displayed in the
+list to the panel.
+
+
+[1]:https://help.ubuntu.com/10.10/internet/C/troubleshooting-wireless.html#troubleshooting-wireless-disabled 

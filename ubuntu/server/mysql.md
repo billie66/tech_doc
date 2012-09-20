@@ -1,30 +1,30 @@
 ### Recover mysql root password 
 
-1. sudo service mysql stop
+    sudo service mysql stop
 
-2. sudo mysqld\_safe --skip-grant-tables &
+    sudo mysqld_safe --skip-grant-tables &
 
-3. mysql -u root mysql
+    mysql -u root mysql
 
-4. mysql> update user set password=PASSWORD('your\_password') where User='root';
+    mysql> update user set password=PASSWORD('your_password') where User='root';
 
-5. mysql> flush privileges;
+    mysql> flush privileges;
 
-6. mysql> quit;
+    mysql> quit;
 
-7. kill -9 pid(mysqld\_safe)
+    kill -9 pid(mysqld_safe)
 
-8. sudo service mysql start
+    sudo service mysql start
 
-9. mysql -u root -p 
+    mysql -u root -p 
 
 ### Change mysql root password
 
-     mysqladmin -u root -p'old\_password' password new\_password
+    mysqladmin -u root -p'old_password' password new_password
 
 To setup root password for the first time, then use following command:
 
-     mysqladmin -u root password new\_password
+    mysqladmin -u root password new_password
 
 ### import data to database
 

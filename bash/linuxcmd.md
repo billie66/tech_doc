@@ -218,3 +218,9 @@ of tty0-tty6.
 ### ffmpeg
 
     ffmpeg -i xx.mov xx.mp3
+
+### scp
+    
+    scp -r dirname username@hostname:
+
+
