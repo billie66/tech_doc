@@ -1,9 +1,10 @@
 start mysql (three methods):
 
-   * /etc/init.d/mysql restart
+* /etc/init.d/mysql restart
 
-   * mysql -u root
-   * mysql -u root -p 
+* mysql -u root
+
+* mysql -u root -p 
 
 set password:
 

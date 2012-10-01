@@ -1,4 +1,4 @@
-### how to change GNOME focus policy 
+### change GNOME focus policy 
 
 In ubuntu, the default focus policy of GNOME is "click to focus", which means 
 a window become active you need to click on it, but I want to change it to 
@@ -7,13 +7,13 @@ over it. So this will ease text copying and pasting.
 
     System->windows->select windows when the mouse moves over them
 
-### how to check the bits of OS
+### check the bits of OS
 
     uname -a
     
 For example i[3456]86 are 32-bit, while X86\_64 is 64-bit.
 
-### how to see whether the cpu is 32-bit or 64-bit
+### see whether the cpu is 32-bit or 64-bit
 
     grep --color=always -iw lm /proc/cpuinfo
     
@@ -24,10 +24,6 @@ If this command returns "lm" (Long Mode), then your processor is capable of
 
     System->Administration->Startup Disk Creator 
 
-### list all the users
-
-    lastlog
-
 ### check what ports are open 
 
     nmap -sS -O 127.0.0.1
@@ -36,4 +32,34 @@ or:
     
     netstat -ntulp
 
+### list all the users
+
+    lastlog
+
+### add/delete a new account
+
+    sudo adduser username --ingroup admin
+
+    sudo deluser username
+
+You should remove the user's home directory manually.
+
+<https://help.ubuntu.com/11.04/serverguide/user-management.html>
+
+### list all the groups which a user belongs to
+
+    groups username
+
+### list the members in a group
+
+    members()
+    {
+        cat /etc/group | grep --regex "^$1:.*" | awk -F: '{print $4}'
+    }
+    members group
+
+or:
+
+    sudo apt-get install members
+    members group
 

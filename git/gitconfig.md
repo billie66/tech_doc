@@ -15,6 +15,7 @@
     br = branch
     ci = commit -a -v 
     throw = reset --hard # remove staged and working tree changes
+    throwh = reset --hard HEAD^ # remove the latest commit 
     cn = clean -f -d     # remove untracked files
 [color]
     ui = auto
