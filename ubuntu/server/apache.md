@@ -9,11 +9,11 @@
 ### create a virtual host 
 
     <VirtualHost *:80>
-        ServerAdmin webmaster@book.org
-        ServerName book.org
+        ServerAdmin webmaster@book
+        ServerName book
         DocumentRoot /home/billie/book/public
-        ErrorLog /home/billie/book/public
-        CustomLog /home/billie/book/public combined
+        ErrorLog /home/billie/book/log/error.log
+        CustomLog /home/billie/book/log/access.log combined
         RailsEnv development
         <Directory /home/billie/book/public>
             AllowOverride all
@@ -35,6 +35,17 @@
 ### disable the virtual host
 
     sudo a2dissite book.org
+
+### errors
+
+* Fix: nginx is using the 80 port, so shut down the nginx.
+
+    sudo service apache2 start
+    * Starting web server apache2
+    (98)Address already in use: make_sock: could not bind to address 0.0.0.0:80
+    no listening sockets available, shutting down
+
+* After a new gem installed, you should restart the apache to get the changes.
 
 [good site][http://library.linode.com/lamp-guides/ubuntu-11.04-natty#sph_install-and-configure-the-apache-web-server]
 
