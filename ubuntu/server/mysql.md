@@ -30,3 +30,6 @@ To setup root password for the first time, then use following command:
 
     mysql -uroot ec_development<ec_development.sql
 
+### resources
+
+* <http://www.sitepoint.com/optimizing-mysql-application/>

@@ -62,6 +62,8 @@ send email from your application
     cap deploy:setup
     cap deploy
 
+* <http://guides.beanstalkapp.com/deployments/deploy-with-capistrano.html>
+
 ### rails production env
 
     RAILS_ENV=production rake db:create
@@ -70,9 +72,20 @@ send email from your application
     RAILS_ENV=production rake db:drop:all
     RAILS_ENV=production rake assets:precompile 
 
+### rails cache
+
+* <http://paulbarry.com/articles/2008/04/19/serving-images-stored-in-the-database-with-rails>
+
+* <http://www.ibm.com/developerworks/web/library/wa-rails2/index.html>
+
+### bundle issues
+
+* <https://github.com/carlhuda/bundler/blob/master/ISSUES.md >
+
 ### references 
 
-    http://docs.rubygems.org/
-    rbenv wiki
+* <http://docs.rubygems.org/>
+* rbenv wiki
+* <http://rdoc.info/docs/rails/3.2.8/String>
 
 

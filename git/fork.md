@@ -11,6 +11,14 @@ Now, change file .git/config of the local repo happycasts
 to:
     url = git@github.com:billie66/happycasts.git 
 
+or use command:
+
+    git remote set-url origin git@github.com:billie66/happycasts.git
+
+next add a new remote named upstream:
+
+    git remote add upstream git://github.com/happypeter/happycasts.git
+
 then add a new branch:
 
    [branch "compass"]
@@ -24,9 +32,13 @@ Create a new branch named compass and make it working branch.
     git branch compass
     git checkout compass
 
-Push all changes on the compass branch to the remote compass branch on github.
+Push all changes on the local compass branch to the remote compass branch on github.
 
     git push origin compass
 
-Check the repo on github if it has a new branch named compass.
+Check the repo on github whether it has a new branch named compass.
+
+Deleter the compass branch on the github:
+
+    git push origin :compass
  
