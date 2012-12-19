@@ -82,10 +82,28 @@ send email from your application
 
 * <https://github.com/carlhuda/bundler/blob/master/ISSUES.md >
 
+### cron task
+
+* gem 'whenever'
+
+* whenever --update-crontab weibo //Here `weibo` is just an identifier
+
+### Json API
+
+* http://railscasts.com/episodes/350-rest-api-versioning?view=asciicast
+
+* Versionist
+
+* issue 297
+
+* github json api http://developer.github.com/v3/#pagination
+
+* rails request and response
+
+* http header fields
+
 ### references 
 
 * <http://docs.rubygems.org/>
 * rbenv wiki
 * <http://rdoc.info/docs/rails/3.2.8/String>
-
-

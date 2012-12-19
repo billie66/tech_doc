@@ -1,3 +1,12 @@
 ### coverting from hg to git
 
+    cd
+    git clone git://repo.or.cz/fast-export.git
+    git init git_repo
+    cd git_repo
+    ~/fast-export/hg-fast-export.sh -r /path/to/old/mercurial_repo
+    git checkout HEAD
+
+* http://stackoverflow.com/questions/10710250/converting-mercurial-folder-to-a-git-repository 
+
 
