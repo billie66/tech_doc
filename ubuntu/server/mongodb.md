@@ -57,6 +57,19 @@ to see if it’s working.
 
   java -jar start.jar
 
+* delete /data/db/mongod.lock every time to restart mongod
+
 ### rails
 
-* rails g scaffold micro_video title:string url:text
+* rails g scaffold micro\_video title:string url:text
+
+### tips
+
+* reference && embedded association
+
+    When you’re deciding which of these approaches is to use you need to ask
+    yourself if you’ll ever need the associated records to stand on their own
+    or if you’ll always be accessing them through their parent model. 
+
+* User.skip(2).first
+  

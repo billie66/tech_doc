@@ -58,9 +58,23 @@ send email from your application
 
 ### capistrano
     
-    capfile .
-    cap deploy:setup
+* The first deployment
+
+    capify .
+    -----------------
+    cap deploy:setup ( if meet errors, run `cap deploy:check` )
+    ----------------
     cap deploy
+    cap deploy:restart
+
+* Subsequent deploys 
+
+    cap deploy
+    cap deploy:restart
+
+* methods
+
+  capture <https://github.com/capistrano/capistrano/wiki/2.x-DSL-Action-Inspection-Capture>
 
 * <http://guides.beanstalkapp.com/deployments/deploy-with-capistrano.html>
 
@@ -94,16 +108,31 @@ send email from your application
 
 * Versionist
 
-* issue 297
-
 * github json api http://developer.github.com/v3/#pagination
 
 * rails request and response
 
 * http header fields
 
+### get isodate format
+
+* strftime method in ruby 
+
+* http://stackoverflow.com/questions/11235913/mmddyy-to-iso-timestamp-ruby-on-rails
+
+* monkey patch (config/initializers)
+
+  A monkey patch is a way to extend or modify the run-time code of dynamic
+  languages without altering the original source code. This process has also
+  been termed duck punching.
+
+* http://stackoverflow.com/questions/3420680/monkey-patching-in-rails-3
+
+* http://stackoverflow.com/questions/5370061/format-date-time-in-find-operation-in-rails-3/7479550#7479550
+
 ### references 
 
 * <http://docs.rubygems.org/>
 * rbenv wiki
 * <http://rdoc.info/docs/rails/3.2.8/String>
+* <http://www.reddit.com/>

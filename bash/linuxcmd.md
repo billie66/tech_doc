@@ -223,4 +223,7 @@ of tty0-tty6.
     
     scp -r dirname username@hostname:
 
+### find all links to a file, say foo.rb
+
+    find -L / -samefile path/to/foo.rb
 

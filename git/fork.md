@@ -42,3 +42,9 @@ Deleter the compass branch on the github:
 
     git push origin :compass
  
+### Writing good commit messages
+
+* imperative present tense
+
+ <http://spheredev.org/wiki/Git_for_the_lazy#Writing_good_commit_messages>
+

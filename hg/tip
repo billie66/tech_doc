@@ -7,6 +7,27 @@
     ~/fast-export/hg-fast-export.sh -r /path/to/old/mercurial_repo
     git checkout HEAD
 
+### config
+
+    cd ~
+    touch .hgrc
+    echo "[ui]\n usrname = your name <email>" > .hgrc
+
+### log
+ 
+    hg log -l3
+
+### status
+
+    hg status
+
+### commit
+
+    hg commit -m "message"
+
+### diff
+
+    hg diff -r rev (the latest revision number)
+    hg diff -r rev -r rev1
+
 * http://stackoverflow.com/questions/10710250/converting-mercurial-folder-to-a-git-repository 
-
-
