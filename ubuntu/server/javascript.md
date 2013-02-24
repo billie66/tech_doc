@@ -14,3 +14,7 @@
 ### jsfiddle
 
 * http://jsfiddle.net/DxjeL/17/
+
+### JavaScript Templates Demo
+
+* http://blueimp.github.com/JavaScript-Templates/
