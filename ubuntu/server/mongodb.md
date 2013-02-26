@@ -1,4 +1,4 @@
-ubuntu server 11.04
+### Install mongodb on ubuntu
 
 * Append the below line to the end of the file /etc/apt/sources.list
     
@@ -25,6 +25,22 @@ MongoDB files are copied to `/usr/bin` folder.
 The main configuration file `mongodb.conf` is located at `/etc/mongodb.conf`, 
 change the values to customize your mongoDB server.
 
+* Lauch mongodb server
+
+    --- On ubuntu 12.04 ---
+    rm /var/lib/mongodb/mongod.lock
+    sudo service mongodb start
+    --- end ---
+
+* Lauch mongodb server
+
+    --- On ubuntu 11.04 ---
+    mkdir /data/db/
+    mkdir /data/db/journal
+    rm  /data/db/mongod.lock
+    mongod &
+    --- end ---
+
 * Verification
 
 To verify it, just connect it with “mongo”
@@ -38,11 +54,20 @@ to see if it’s working.
 
 * chkconfig mongodb
 
-### rails & mongodb
+### rails & mongodb (for vplayer.net)
 
-* bundle
-* sudo apt-get install advancecomp  //for installing advpng
-* mongod &
+* why install memcashed in development env?(for cache all assets files)
+
+Since the setting in the file config/environment/development.rb:
+
+  config.action_controller.perform_caching = true
+
+so if change the value from `true` to `false`, then the assets will not be cached.
+
+* sudo apt-get install -y advancecomp gifsicle jpegoptim libjpeg-progs optipng pngcrush (for image_optim)
+* sudo apt-get insatll libxml2-dev libxslt-dev (for nokogiri)
+* bundle install
+* sudo service mongodb start
 * rake db:drop
 * rake db:seed
 * upload an app
@@ -57,11 +82,9 @@ to see if it’s working.
 
   java -jar start.jar
 
-* delete /data/db/mongod.lock every time to restart mongod
+### micro video
 
-### rails
-
-* rails g scaffold micro\_video title:string url:text
+  my first task
 
 ### tips
 
@@ -72,4 +95,11 @@ to see if it’s working.
     or if you’ll always be accessing them through their parent model. 
 
 * User.skip(2).first
-  
+
+* show dbs
+
+* use dbname
+
+* show collections
+
+* db.blogs.find()

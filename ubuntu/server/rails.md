@@ -13,7 +13,7 @@ Adding the two lines above to the Gemfile would fix the problem.
 
 ### mysql
 
-    sudo apt-get install mysql-sever 
+    sudo apt-get install mysql-sever
     sudo apt-get install libmysqlclient16-dev
     gem 'mysql2'
 
@@ -33,7 +33,7 @@ Adding the two lines above to the Gemfile would fix the problem.
     sudo apt-get -y install libreadline5-dev
     sudo apt-get -y install curl
     rbenv install 1.9.3-p194
-    rbenv rehash 
+    rbenv rehash
 
 ### postfix
 
@@ -57,7 +57,7 @@ send email from your application
     curl -L https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
 
 ### capistrano
-    
+
 * The first deployment
 
     capify .
@@ -67,7 +67,7 @@ send email from your application
     cap deploy
     cap deploy:restart
 
-* Subsequent deploys 
+* Subsequent deploys
 
     cap deploy
     cap deploy:restart
@@ -84,7 +84,7 @@ send email from your application
     RAILS_ENV=production rake db:schema:load
     RAILS_ENV=production rake db:drop
     RAILS_ENV=production rake db:drop:all
-    RAILS_ENV=production rake assets:precompile 
+    RAILS_ENV=production rake assets:precompile
 
 ### rails cache
 
@@ -116,7 +116,7 @@ send email from your application
 
 ### get isodate format
 
-* strftime method in ruby 
+* strftime method in ruby
 
 * http://stackoverflow.com/questions/11235913/mmddyy-to-iso-timestamp-ruby-on-rails
 
@@ -130,7 +130,7 @@ send email from your application
 
 * http://stackoverflow.com/questions/5370061/format-date-time-in-find-operation-in-rails-3/7479550#7479550
 
-### references 
+### references
 
 * <http://docs.rubygems.org/>
 * rbenv wiki
