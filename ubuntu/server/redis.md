@@ -2,6 +2,10 @@
 
     sudo apt-get install redis-server
 
+### run redis as start system
+
+    sudo update-rc.d redis-server defaults
+
 ### References
 
 * <http://redis.io/topics/quickstart>

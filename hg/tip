@@ -23,7 +23,7 @@
 
 ### commit
 
-    hg commit -m "message"
+    hg commit -m "message" -u Billie\ Zhang
 
 ### diff
 

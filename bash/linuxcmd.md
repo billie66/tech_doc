@@ -227,3 +227,6 @@ of tty0-tty6.
 
     find -L / -samefile path/to/foo.rb
 
+### create a tarball
+
+    tar -cvzf vplayer.tar.gz vplayer 

@@ -28,7 +28,7 @@ change the values to customize your mongoDB server.
 * Lauch mongodb server
 
     --- On ubuntu 12.04 ---
-    rm /var/lib/mongodb/mongod.lock
+    rm /var/lib/mongodb/mongod.lock ( can't run two deamon simultaneously)
     sudo service mongodb start
     --- end ---
 
@@ -64,8 +64,9 @@ Since the setting in the file config/environment/development.rb:
 
 so if change the value from `true` to `false`, then the assets will not be cached.
 
-* sudo apt-get install -y advancecomp gifsicle jpegoptim libjpeg-progs optipng pngcrush (for image_optim)
 * sudo apt-get insatll libxml2-dev libxslt-dev (for nokogiri)
+* sudo apt-get install -y advancecomp gifsicle jpegoptim libjpeg-progs optipng pngcrush (for image_optim)
+* sudo apt-get install imagemagick (for uploading images)
 * bundle install
 * sudo service mongodb start
 * rake db:drop
@@ -81,10 +82,6 @@ so if change the value from `true` to `false`, then the assets will not be cache
 * go to vendor/solr/sunspot_solr_mmseg4j, run the command below
 
   java -jar start.jar
-
-### micro video
-
-  my first task
 
 ### tips
 
@@ -103,3 +100,7 @@ so if change the value from `true` to `false`, then the assets will not be cache
 * show collections
 
 * db.blogs.find()
+
+* db.blogs.help()
+
+* db.help()

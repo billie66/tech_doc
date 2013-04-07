@@ -38,9 +38,19 @@ After open the file html.vim, find the following line:
 
 then use double-quote to comment the line above, which will be disabled
 completely. But this don't take effect with my vim. So I replace Underlined
-with italic. 
+with italic.
 
 
-#### .vimrc 
+#### .vimrc
     
     runtime vimrc
+
+#### Carriage return character
+
+use ctrl-V and ctrl-M to input character ^M
+
+show the hidden characters in vim, using command `:set list`, and `:set nolist` to cancel it.
+
+#### CRLF(Windows \r\n), LF(Unix \n), CR(Macintosh \r) line break types
+
+    dos2unix filename

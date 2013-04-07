@@ -2,7 +2,7 @@
 
     Ctrl + A  Go to the beginning of the line you are currently typing on
     Ctrl + E  Go to the end of the line you are currently typing on
-    Ctrl + L                Clears the Screen, similar to the clear command
+    Ctrl + L  Clears the Screen, similar to the clear command
     Ctrl + U  Clears the line before the cursor position. If you are at the end of
               the line, clears the entire line.
     Ctrl + H  Same as backspace
