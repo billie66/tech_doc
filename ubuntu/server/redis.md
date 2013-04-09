@@ -6,6 +6,10 @@
 
     sudo update-rc.d redis-server defaults
 
+### resque to start a worker
+
+    QUEUE=* rake environment resque:work
+
 ### References
 
 * <http://redis.io/topics/quickstart>
