@@ -7,11 +7,18 @@
     ~/fast-export/hg-fast-export.sh -r /path/to/old/mercurial_repo
     git checkout HEAD
 
-### config
+### config ($HOME/.hgrc)
 
-    cd ~
-    touch .hgrc
-    echo "[ui]\n usrname = your name <email>" > .hgrc
+    [ui]
+    username = Billie Zhang <billiecoder@gmail.com>
+    [extensions]
+    mq =
+
+### Extensions 
+
+* After extension mq is activated (set the .hgrc as above), then you can use the following command to remove specified revision.
+    
+    hg strip -r revision (such as 375)
 
 ### log
  
@@ -21,13 +28,29 @@
 
     hg status
 
-### commit
-
-    hg commit -m "message" -u Billie\ Zhang
-
 ### diff
 
     hg diff -r rev (the latest revision number)
     hg diff -r rev -r rev1
 
+### update
+
+If the local repo is not the same as the remote, so at first you should run
+`hg pull` command to get all the changesets from remote, then run `hg update`
+to avoid creating a new branch.
+
+### merge (merge branches), then commit to finish the work.
+  
+  hg merge
+  hg commit
+
+### branch (show the current working branch)
+  
+  hg branch
+
+### branch (show all the branches)
+  
+  hg branches
+
 * http://stackoverflow.com/questions/10710250/converting-mercurial-folder-to-a-git-repository 
+* http://stackoverflow.com/questions/4520697/how-to-remove-changesets-from-a-mercurial-repository
