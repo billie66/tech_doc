@@ -38,3 +38,8 @@ following key combination to control the session.
 Detach a client after, run the command below to activate the client.
 
   tmux attach 
+
+Attach to an session available when tmux is started. very excellent!
+
+  tmux attach-session
+
