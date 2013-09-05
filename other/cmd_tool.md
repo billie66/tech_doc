@@ -67,4 +67,9 @@ files and directories in /tmp/directory/.
 [1]: http://www.linuxtutorialblog.com/post/introduction-using-diff-and-patch-tutorial
 
 
+### ack-grep
+
+* search all the files on the current directory including subdirectories
+
+   ack-grep -a "keyword"
 

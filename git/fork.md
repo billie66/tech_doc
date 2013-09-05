@@ -38,13 +38,16 @@ Push all changes on the local compass branch to the remote compass branch on git
 
 Check the repo on github whether it has a new branch named compass.
 
-Deleter the compass branch on the github:
+Delete the compass branch on the github:
 
     git push origin :compass
- 
+
 ### Writing good commit messages
 
 * imperative present tense
 
  <http://spheredev.org/wiki/Git_for_the_lazy#Writing_good_commit_messages>
 
+### Check commits history of a contributed project
+
+  https://github.com/happypeter/happycasts/commits?author=billie66

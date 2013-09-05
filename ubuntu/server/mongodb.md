@@ -79,7 +79,7 @@ so if change the value from `true` to `false`, then the assets will not be cache
   sudo apt-get update
   sudo apt-get install oracle-java7-installer
 
-* go to vendor/solr/sunspot_solr_mmseg4j, run the command below
+* go to vendor/solr/sunspot_solr\_mmseg4j, run the command below
 
   java -jar start.jar
 
@@ -104,3 +104,9 @@ so if change the value from `true` to `false`, then the assets will not be cache
 * db.blogs.help()
 
 * db.help()
+
+* db.users.findOne({name: 'zgs'})
+
+Here 'role_ids' is an array
+
+* db.users.update({_id: ObjectId("5175fc6fcd880b115c000001")}, {$push: {role_ids: ObjectId("5175fc6fcd880b115c000001")}})

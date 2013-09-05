@@ -14,7 +14,7 @@ Adding the two lines above to the Gemfile would fix the problem.
 ### mysql
 
     sudo apt-get install mysql-sever
-    sudo apt-get install libmysqlclient16-dev
+    sudo apt-get install libmysqlclient-dev (for ubuntu 12.04)
     gem 'mysql2'
 
 ### check RubyGems enviroment variables

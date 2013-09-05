@@ -1,10 +1,10 @@
-### Only one stash 
+### Only one stash
 
 1. git add .
 2. git stash
 3. git stash apply
 
-### several stashes 
+### several stashes
 
 1. git stash list
 2. git stash appy stash@{1}

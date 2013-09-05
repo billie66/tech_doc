@@ -12,7 +12,7 @@ following key combination to control the session.
   ctrl-b %      split the current pane into two, top and bottom.
 
   ctrl-b x      kill the current pane.
-  
+
   ctrl-b &      kill the current window.
 
   ctrl-b c      create a new window.
@@ -37,7 +37,7 @@ following key combination to control the session.
 
 Detach a client after, run the command below to activate the client.
 
-  tmux attach 
+  tmux attach
 
 Attach to an session available when tmux is started. very excellent!
 

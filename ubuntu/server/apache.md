@@ -4,9 +4,9 @@
 
 ### apache config file
 
-    echo SeverName www.book.org:80 >/etc/apache2/httpd.conf
+    echo ServerName www.book.org:80 >/etc/apache2/httpd.conf
 
-### create a virtual host 
+### create a virtual host
 
     <VirtualHost *:80>
         ServerAdmin webmaster@book
@@ -19,7 +19,7 @@
             AllowOverride all
             Options -MultiViews
         </Directory>
-    <VirtualHost>
+    </VirtualHost>
 
 ### install passenger
 
@@ -28,8 +28,8 @@
     passenger-install-apache2-module
 
 ### enable the virtual host
-    
-    sudo a2ensite book.org 
+
+    sudo a2ensite book.org
     sudo /etc/init.d/apache2 reload
 
 ### disable the virtual host

@@ -8,6 +8,6 @@
     NO_PUBKEY 00A6F0A3C300EE8C
     ---
     sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 00A6F0A3C300EE8C
-    sudo apt-get install nginx 
+    sudo apt-get install nginx
 
 ###

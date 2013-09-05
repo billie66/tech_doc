@@ -4,3 +4,8 @@
   It combines individual image files from a directory into a single unified
   sprite image and creates an appropriate CSS stylesheet for use in your web
   application.
+
+### rmagick (ubuntu 12.04)
+
+    sudo apt-get install graphicsmagick-libmagick-dev-compat
+    sudo apt-get install libmagickwand-dev

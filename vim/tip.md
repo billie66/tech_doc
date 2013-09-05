@@ -9,7 +9,7 @@
 If you used 'set textwidth=78', the text pasted into vim can't be aligned
 automatically. The simple way to format it is to select the content, then run:
 
-    gq 
+    gq
 
 You can check the help file for more information. Note that since _gq_ is an
 operator that you can use other ways to select the text to format, but visual
@@ -27,22 +27,21 @@ current paragraph. So you'd do this:
 
 To format the current paragraph use: __gqap__
 
-#### cancle the syntax highlighting of html element a 
+#### cancle the syntax highlighting of html element a
 
     cp /usr/share/vim/vim73/syntax/html.vim ~/.vim/syntax/
     vim ~/.vim/syntax/html.vim
 
 After open the file html.vim, find the following line:
-    
+
     HtmlHiLink htmlLink                    Underlined
 
 then use double-quote to comment the line above, which will be disabled
 completely. But this don't take effect with my vim. So I replace Underlined
-with italic.
-
+with italic. (I commented above line in the original html.vim directly!)
 
 #### .vimrc
-    
+
     runtime vimrc
 
 #### Carriage return character
@@ -54,3 +53,7 @@ show the hidden characters in vim, using command `:set list`, and `:set nolist` 
 #### CRLF(Windows \r\n), LF(Unix \n), CR(Macintosh \r) line break types
 
     dos2unix filename
+
+#### Show hidden characters
+
+  :set list
