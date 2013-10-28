@@ -1,11 +1,13 @@
 ## SSH login without password
 
+### sshd -t
+
 ### Install OpenSSH client application on ubuntu
 
     sudo apt-get install openssh-client
 
-And the command line tool `ssh-copy-id` is shipped with openssh-client package. 
-    
+And the command line tool `ssh-copy-id` is shipped with openssh-client package.
+
     dpkg -S ssh-copy-id
 
 ### Install OpenSSH server application on ubuntu
@@ -26,10 +28,10 @@ enter a passphrase:
 
     a@A:~> ssh-keygen -t rsa
     Generating public/private rsa key pair.
-    Enter file in which to save the key (/home/a/.ssh/id_rsa): 
+    Enter file in which to save the key (/home/a/.ssh/id_rsa):
     Created directory '/home/a/.ssh'.
-    Enter passphrase (empty for no passphrase): 
-    Enter same passphrase again: 
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
     Your identification has been saved in /home/a/.ssh/id_rsa.
     Your public key has been saved in /home/a/.ssh/id_rsa.pub.
     The key fingerprint is:
@@ -39,18 +41,18 @@ Now use ssh to create a directory ~/.ssh as user b on B. (The directory may
 already exist, which is fine):
 
     a@A:~> ssh b@B mkdir -p .ssh
-    b@B's password: 
+    b@B's password:
 
 Finally append a's new public key to `b@B:.ssh/authorized_keys` and enter b's
 password one last time:
 
     a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
-    b@B's password: 
+    b@B's password:
 
 Or:
 
     a@A:~> ssh-copy-id b@B
-    b@B's password: 
+    b@B's password:
     Now try logging into the machine, with "ssh 'kitty'", and check in:
 
     .ssh/authorized_keys
