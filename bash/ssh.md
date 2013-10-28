@@ -6,7 +6,9 @@
     Could not load host key: /etc/ssh/ssh_host_rsa_key
     Could not load host key: /etc/ssh/ssh_host_dsa_key
     Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+    :~$ sudo sshd -t
 
+It is a permission problem. All of these host keys are not empty.
 
 ### Install OpenSSH client application on ubuntu
 

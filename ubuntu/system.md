@@ -1,4 +1,4 @@
-### change GNOME focus policy 
+### change GNOME focus policy
 
 In ubuntu, the default focus policy of GNOME is "click to focus", which means 
 a window become active you need to click on it, but I want to change it to 
@@ -10,26 +10,26 @@ over it. So this will ease text copying and pasting.
 ### check the bits of OS
 
     uname -a
-    
+
 For example i[3456]86 are 32-bit, while X86\_64 is 64-bit.
 
 ### see whether the cpu is 32-bit or 64-bit
 
     grep --color=always -iw lm /proc/cpuinfo
-    
-If this command returns "lm" (Long Mode), then your processor is capable of
-64-bit. 
 
-### make a bootable usb stick 
+If this command returns "lm" (Long Mode), then your processor is capable of
+64-bit.
+
+### make a bootable usb stick
 
     System->Administration->Startup Disk Creator 
 
-### check what ports are open 
+### check what ports are open
 
     nmap -sS -O 127.0.0.1
 
 or:
-    
+
     netstat -ntulp
 
 ### list all the users
@@ -63,3 +63,13 @@ or:
     sudo apt-get install members
     members group
 
+### chkconfig (ubuntu 12.04)
+
+start ssh server, meet error like below:
+
+    $ chkconfig -s ssh on
+    /sbin/insserv: No such file or directory
+
+fix it with this command:
+
+    $ ln -s /usr/lib/insserv/insserv /sbin/insserv
