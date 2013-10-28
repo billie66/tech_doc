@@ -31,12 +31,44 @@
         address 192.168.56.10
         netmask 255.255.255.0
     billie@kitty:/etc/network$ sudo ifup eth1
-  
+
 * on your host machine
 
   billie@:~ ssh billie@192.168.56.10
 
+### Enable shared folder
+
+* Open the preferences of the Ubuntu VM (you need to shut it down before) Go to “Shared Folder” and click on “+”
+
+* In the first line of the popup select the folder on your Mac which you want to see in Ubuntu
+
+* In the second line of the popup enter the name “Projects” (or whatever your prefer)
+
+* Activate the second checkbox “automatic mounting” (or a similar wording).
+
+* Click “OK” and start your Ubuntu VM
+
+* In Ubuntu (maybe even connected via SSH?) type the following to add a mounting point for the shared folder:
+
+  sudo mkdir /mnt/Projects
+  sudo chmod 777 /mnt/Projects
+  sudo mount -t vboxsf -o uid=1000,gid=1000 Projects /mnt/Projects
+
+* Now enable auto-mounting. For this, we open the file which is always run at the start of Ubuntu:
+
+  sudo vim /etc/rc.local
+
+* Add the following line above(!!!) the line with “exit 0”:
+
+  sudo mount -t vboxsf -o uid=1000,gid=1000 Projects /mnt/Projects
+
+* save and close vim
+
+* from now on your Mac OS X folder is always in /mnt/Projects inside Ubuntu, even after a reboot
+
 ### reference material
 
-<http://muffinresearch.co.uk/archives/2010/02/08/howto-ssh-into-virtualbox-3-linux-guests/>
- 
+* <http://muffinresearch.co.uk/archives/2010/02/08/howto-ssh-into-virtualbox-3-linux-guests/>
+
+* <http://www.lecloud.net/post/52224625343/the-ultimate-setup-guide-ubuntu-13-04-in-virtualbox>
+
