@@ -2,6 +2,12 @@
 
 ### sshd -t
 
+    :~$ sshd -t
+    Could not load host key: /etc/ssh/ssh_host_rsa_key
+    Could not load host key: /etc/ssh/ssh_host_dsa_key
+    Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+
+
 ### Install OpenSSH client application on ubuntu
 
     sudo apt-get install openssh-client
