@@ -1,6 +1,6 @@
 ### du command 
 You can use _du_ command in linux system to check the size of a file, or files 
-size in a directory.    
+size in a directory.
 
     billie@billie-ThinkPad:/boot$ du -h
     16K ./grub/locale
@@ -9,7 +9,7 @@ size in a directory.
 
 The option `-h` means printing sizes in human readable format. The above
 command listed the total size of the current directory with its subdirectories 
-size respectively. 
+size respectively.
 
 You can read man pages to get more usage of _du_. A website about the examples
 of [du command][1].
@@ -18,7 +18,7 @@ of [du command][1].
 
 ### check file type
 
-Use _file_ command to get a file type. 
+Use _file_ command to get a file type.
 
     billie@billie-ThinkPad:/$ file initrd.img
     initrd.img: symbolic link to `boot/initrd.img-2.6.35-28-generic'
@@ -26,7 +26,7 @@ Use _file_ command to get a file type.
 ### df command
 
 check the file system disk space usage
-    
+
     billie@~$ df
     Filesystem           1K-blocks      Used Available Use% Mounted on
     /dev/sda6             48060296   8326856  37292072  19% /
@@ -54,15 +54,15 @@ independent command installed in your PC.
 If the `-a` option is used, type returns all of the places that contain an
 executable named file. This includes aliases and functions, if and only if the
 `-p` option is not also used.
-        
+
 ### tr command
-    
+
 Convert doc text file to unix.
 
     tr "\r" " " <doc >temp
     sed -n "s/ $//p" <temp >unix
-    rm temp 
-    
+    rm temp
+
 ### how to check the version of ubuntu installed
 
     billie@~$ lsb_release -a
@@ -71,7 +71,7 @@ Convert doc text file to unix.
     Description:    Ubuntu 10.10
     Release:    10.10
     Codename:   maverick
-    billie@~$ 
+    billie@~$
 
 Also, you can view the file `/etc/lsb-release`, or through `system->about ubuntu`
 
@@ -109,20 +109,20 @@ runs `ctags` only once with all files as its arguments.
 
 The above command, we call it the third one. It has the same effect as the
 second one. If you think the second is not easy to understand, you can use the
-third to replace it. 
+third to replace it.
 
 In additional, if you want to omit some files in a subdirectory, you can use
-the command below. I use _mutt_ repository as an example. 
+the command below. I use _mutt_ repository as an example.
 
     dir=~/mutt-1.5.21
-    find $dir -path "$dir/m4" -prune -o -path "$dir/doc" -prune -o -name "*.[ch]" | xargs ctags 
+    find $dir -path "$dir/m4" -prune -o -path "$dir/doc" -prune -o -name "*.[ch]" | xargs ctags
 
 In the above command, it omit the files in two directories, `m4` and `doc`.
 
-### tar command 
+### tar command
 
 I will use a simple example to explain how to create or extract files from a tarball.
-    
+
     billie@billie-ThinkPad:~/mutt$ ls
     mutt-1.5.21
     billie@billie-ThinkPad:~/mutt$ tar -jc -f mutt-1.5.21.tar.bz2 mutt-1.5.21/
@@ -135,21 +135,21 @@ I will use a simple example to explain how to create or extract files from a tar
     billie@billie-ThinkPad:~/mutt$ file mutt-1.5.21.tar.bz2 mutt-1.5.21.tar.gz 
     mutt-1.5.21.tar.bz2: bzip2 compressed data, block size = 900k
     mutt-1.5.21.tar.gz:  gzip compressed data, from Unix, last modified: Wed ~
-    billie@billie-ThinkPad:~/mutt$ 
+    billie@billie-ThinkPad:~/mutt$
 
 The option `-jc` means creating a tarball compressed by `bzip2` utility. The
 option `-f` specifies the tarball's name. The option `-z` will invoke `gzip`
 tool to compress an archive. Obviously, `bzip2` is better than `gzip`. We can
-draw a conclusion by comparing the size of the two tarballs. 
+draw a conclusion by comparing the size of the two tarballs.
 
     tar -jx -f mutt-1.5.21.tar.bz2
     tar -zx -f mutt-1.5.21.tar.gz
 
-When you get a tarball, you can use the above commands to uncompress it 
-according to the name of tarball. More information could be found in man pages. 
+When you get a tarball, you can use the above commands to uncompress it
+according to the name of tarball. More information could be found in man pages.
 
 Also, you can use `tar` command to backup your files to devices ( a tape):
-    
+
     tar -cv -f /dev/st0 /etc
 
 ### crontab command
@@ -160,7 +160,7 @@ then _cron_ daemon will do these jobs. So how to write a task to the file, you
 should use _crontab_ command which maintain _crontab_ files for individual
 users, because user's _crontab_ files are not allowed to be edited under that
 directory directly.
-    
+
     billie@billie-ThinkPad:/$ crontab -e
 
 After running the command in the first time, display a menu which lists all the 
@@ -170,15 +170,15 @@ file. Then add all the tasks to it in terms of syntax, a task per line.
     */5 * * * * touch ~/test
 
 This means to create a file named `test` under your home directory every five
-minutes. 
-    
-    billie@billie-ThinkPad:/$ crontab -l  
+minutes.
 
-The `-l` means to list user's crontab. 
+    billie@billie-ThinkPad:/$ crontab -l
+
+The `-l` means to list user's crontab.
 
     billie@billie-ThinkPad:/$ crontab -r
 
-The `-r` means to delete user's crontab. 
+The `-r` means to delete user's crontab.
 
 For more information in detail, you can use the commands below.
 
@@ -197,14 +197,14 @@ The line above is a snippet code from `~/.bashrc`. Now, I want to change the val
 of PS1 as the following.
 
     PS1='${debian_chroot:+($debian_chroot)}\u@\w\$ '
-    
+
 After deleting `\h:`, the hostname and semicolon will not display in bash prompt.
 Only saving the file is not enough, it doesn't work. Why? Because shell
 doesn't know the value of PS1 have been changed. So you have to notify the
 shell. At this time, you need to use _source_ command or '.' command to reset
 the shell execution environment.
-    
-    billie@billie-ThinkPad:~$ source ~/.bashrc 
+
+    billie@billie-ThinkPad:~$ source ~/.bashrc
     billie@billie-ThinkPad:~$ . ~/.bashrc
     billie@~$
 
@@ -220,8 +220,12 @@ of tty0-tty6.
     ffmpeg -i xx.mov xx.mp3
 
 ### scp
-    
+
     scp -r dirname username@hostname:
+
+### ssh
+
+    ssh username@hostname
 
 ### find all links to a file, say foo.rb
 
@@ -229,4 +233,4 @@ of tty0-tty6.
 
 ### create a tarball
 
-    tar -cvzf vplayer.tar.gz vplayer 
+    tar -cvzf sample.tar.gz sample
