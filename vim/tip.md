@@ -15,7 +15,7 @@ You can check the help file for more information. Note that since _gq_ is an
 operator that you can use other ways to select the text to format, but visual
 mode is the most intuitive for me.
 
-Also you could do this: 
+Also you could do this:
 
     gq16j
 
