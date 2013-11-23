@@ -31,9 +31,6 @@ check the file system disk space usage
     Filesystem           1K-blocks      Used Available Use% Mounted on
     /dev/sda6             48060296   8326856  37292072  19% /
     none                    984616       304    984312   1% /dev
-    none                    992440     20960    971480   3% /dev/shm
-    none                    992440        96    992344   1% /var/run
-    none                    992440         0    992440   0% /var/lock
     /dev/sda7             75512952   1250540  70426508   2% /home
     billie@~$ df /home
     Filesystem           1K-blocks      Used Available Use% Mounted on
@@ -125,17 +122,17 @@ I will use a simple example to explain how to create or extract files from a tar
 
     billie@billie-ThinkPad:~/mutt$ ls
     mutt-1.5.21
-    billie@billie-ThinkPad:~/mutt$ tar -jc -f mutt-1.5.21.tar.bz2 mutt-1.5.21/
-    billie@billie-ThinkPad:~/mutt$ tar -zc -f mutt-1.5.21.tar.gz mutt-1.5.21/
-    billie@billie-ThinkPad:~/mutt$ ls
+    billie@:~/mutt$ tar -jc -f mutt-1.5.21.tar.bz2 mutt-1.5.21/
+    billie@:~/mutt$ tar -zc -f mutt-1.5.21.tar.gz mutt-1.5.21/
+    billie@:~/mutt$ ls
     mutt-1.5.21  mutt-1.5.21.tar.bz2 mutt-1.5.21.tar.gz
-    billie@billie-ThinkPad:~/mutt$ du -m mutt-1.5.21.tar*
+    billie@:~/mutt$ du -m mutt-1.5.21.tar*
     4   mutt-1.5.21.tar.bz2
     5   mutt-1.5.21.tar.gz
-    billie@billie-ThinkPad:~/mutt$ file mutt-1.5.21.tar.bz2 mutt-1.5.21.tar.gz 
+    billie@:~/mutt$ file mutt-1.5.21.tar.bz2 mutt-1.5.21.tar.gz
     mutt-1.5.21.tar.bz2: bzip2 compressed data, block size = 900k
     mutt-1.5.21.tar.gz:  gzip compressed data, from Unix, last modified: Wed ~
-    billie@billie-ThinkPad:~/mutt$
+    billie@:~/mutt$
 
 The option `-jc` means creating a tarball compressed by `bzip2` utility. The
 option `-f` specifies the tarball's name. The option `-z` will invoke `gzip`
@@ -161,7 +158,7 @@ should use _crontab_ command which maintain _crontab_ files for individual
 users, because user's _crontab_ files are not allowed to be edited under that
 directory directly.
 
-    billie@billie-ThinkPad:/$ crontab -e
+    billie@:/$ crontab -e
 
 After running the command in the first time, display a menu which lists all the 
 editors used to edit your crontab file. Select your preferred editor, open the
@@ -172,11 +169,11 @@ file. Then add all the tasks to it in terms of syntax, a task per line.
 This means to create a file named `test` under your home directory every five
 minutes.
 
-    billie@billie-ThinkPad:/$ crontab -l
+    billie@:/$ crontab -l
 
 The `-l` means to list user's crontab.
 
-    billie@billie-ThinkPad:/$ crontab -r
+    billie@:/$ crontab -r
 
 The `-r` means to delete user's crontab.
 
@@ -204,8 +201,8 @@ doesn't know the value of PS1 have been changed. So you have to notify the
 shell. At this time, you need to use _source_ command or '.' command to reset
 the shell execution environment.
 
-    billie@billie-ThinkPad:~$ source ~/.bashrc
-    billie@billie-ThinkPad:~$ . ~/.bashrc
+    billie@:~$ source ~/.bashrc
+    billie@:~$ . ~/.bashrc
     billie@~$
 
 These two commands have the same effect. The shell prompt changes simpler than
