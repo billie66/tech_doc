@@ -14,3 +14,8 @@ what it looks like:
 
   output: Email address: example@gmail.com
 
+### tutorial
+
+* http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
+
+* http://nicolasgallagher.com/
