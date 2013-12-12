@@ -1,4 +1,4 @@
-### content property
+/*### content property*/
 
 CSS has a property called content. It can only be used with the pseudo
 elements :after and :before. It is written like a pseudo selector (with the
@@ -19,3 +19,9 @@ what it looks like:
 * http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
 
 * http://nicolasgallagher.com/
+
+* http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+* http://findicons.com/icon/169086/ktip
+
+* http://findicons.com/pack/1742/ecqlipse_2
