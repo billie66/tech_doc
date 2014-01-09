@@ -1,4 +1,3 @@
-
 ### convert the encoding method of a given file  
 
 When open a file, maybe you see the file messed up with a lot of odd symbols. This means
@@ -16,7 +15,7 @@ which is a little complex.
 
 So, first you should figure out what a file encoding type is, you can use the
 following command.
-    
+
     file -bi filename
 
 There are also two utilities can convert the encoding of a file, `recode` and
@@ -24,10 +23,10 @@ There are also two utilities can convert the encoding of a file, `recode` and
 install them first. The `recode` will rewrite the original file with the
 locale native encoding automatically, the old file will disappear.
 
-    recode big5 oldfile 
+    recode big5 oldfile
 
 ### locale in ubuntu
 
 List all the available locales in your system, use `locale -a`. You can go to
 directory `/usr/share/locales` to install specified language package.Then run
-`dpkg-reconfigure locales`. 
+`dpkg-reconfigure locales`.

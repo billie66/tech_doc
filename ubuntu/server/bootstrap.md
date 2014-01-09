@@ -1,6 +1,6 @@
-### responsive 
+### responsive
 
-* http://stackoverflow.com/questions/9386429/simple-bootstrap-page-is-not-responsive-on-the-iphone 
+* http://stackoverflow.com/questions/9386429/simple-bootstrap-page-is-not-responsive-on-the-iphone
 
 ### What bug does zoom:1; fix in CSS?
 

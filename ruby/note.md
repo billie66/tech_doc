@@ -10,3 +10,6 @@
 
 ### resources
 
+* gem public_activity issue
+
+https://github.com/pokonski/public_activity/issues/61
