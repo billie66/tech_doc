@@ -9,3 +9,7 @@
 
     sudo apt-get install graphicsmagick-libmagick-dev-compat
     sudo apt-get install libmagickwand-dev
+
+### get the lastest version of a gem
+
+  gem list -r font-awesome-rails
