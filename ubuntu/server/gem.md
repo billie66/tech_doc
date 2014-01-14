@@ -13,3 +13,10 @@
 ### get the lastest version of a gem
 
   gem list -r font-awesome-rails
+
+### install node.js
+
+  $ sudo apt-get install python-software-properties
+  $ sudo apt-add-repository ppa:chris-lea/node.js
+  $ sudo apt-get update
+  $ sudo apt-get install nodejs
