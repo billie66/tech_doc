@@ -73,3 +73,7 @@ start ssh server, meet error like below:
 fix it with this command:
 
     $ ln -s /usr/lib/insserv/insserv /sbin/insserv
+
+### how to stop being prompted to unlock the keyring
+
+http://askubuntu.com/questions/31786/chrome-asks-for-password-to-unlock-keyring-on-startup

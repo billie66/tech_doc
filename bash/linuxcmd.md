@@ -231,3 +231,8 @@ of tty0-tty6.
 ### create a tarball
 
     tar -cvzf sample.tar.gz sample
+
+### open an image
+
+    eog filename
+
