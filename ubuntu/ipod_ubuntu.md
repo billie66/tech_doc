@@ -10,7 +10,7 @@ can sync songs with ipod.
 
 1. import songs in pc to Rhythmbox
 
-    Music -> import files...
+   Music -> import files...
 
 2. select `PETER` label, then will display a curving arrow icon in the button
    bar.
