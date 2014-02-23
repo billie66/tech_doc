@@ -236,3 +236,7 @@ of tty0-tty6.
 
     eog filename
 
+### change the owner of a file
+
+    chown billie:billie filename
+
