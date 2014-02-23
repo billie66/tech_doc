@@ -14,11 +14,11 @@
 
 4. go to the adt-bundle-linux-x86-20131030 directory
 
-    billie@goodcat:~/adt-bundle-linux-x86-20131030$ ls
+    <pre><code>billie@goodcat:~/adt-bundle-linux-x86-20131030$ ls
     eclipse  sdk
     billie@goodcat:~/adt-bundle-linux-x86-20131030$ cd sdk
     billie@goodcat:~/adt-bundle-linux-x86-20131030/sdk$ ls
-    add-ons  build-tools  extras  platforms  platform-tools  samples  system-images  temp  tools
+    add-ons  build-tools  extras  platforms  platform-tools  samples  system-images  temp  tools</code></pre>
 
 5. edit /home/billie/.bashrc file, add the two lines below to it.
 
