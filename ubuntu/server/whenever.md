@@ -6,23 +6,23 @@
 
 #### Getting started
 
-    <pre><code>$ cd /apps/my-great-project
-    $ wheneverize .</code></pre>
+    $ cd /apps/my-great-project
+    $ wheneverize .
 
 This will create an initial config/schedule.rb file for you.
 
 #### Example schedule.rb file
 
-  <pre><code>every 3.hours do
-    runner "MyModel.some_process"
-    rake "my:rake:task"
-    command "/usr/bin/my_great_command"
-  end</code></pre>
+    every 3.hours do
+      runner "MyModel.some_process"
+      rake "my:rake:task"
+      command "/usr/bin/my_great_command"
+    end
 
 #### The `whenever` command
 
-  <pre><code>$ cd /apps/my-great-project
-  $ whenever</code></pre>
+    $ cd /apps/my-great-project
+    $ whenever
 
 This will simply show you your schedule.rb file converted to cron syntax. It does not read or write your crontab file.
 
