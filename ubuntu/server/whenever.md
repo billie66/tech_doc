@@ -26,12 +26,12 @@ This will create an initial config/schedule.rb file for you.
 
 This will simply show you your schedule.rb file converted to cron syntax. It does not read or write your crontab file.
 
-  <pre><code>$ cd /apps/my-great-project
-  $ whenever -i </code></pre>
+    <pre><code>$ cd /apps/my-great-project
+    $ whenever -i </code></pre>
 
 This will write your crontab file.
 
-  <pre><code>$ cd /apps/my-great-project
-  $ whenever -s "environment=development"</code></pre>
+    <pre><code>$ cd /apps/my-great-project
+    $ whenever -s "environment=development"</code></pre>
 
-This will set your cron jobs runnint environment. Run whenever --help for a complete list of options.
+This will set your cron jobs runnint environment. Run `whenever --help` for a complete list of options.
