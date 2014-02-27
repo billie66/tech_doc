@@ -1,6 +1,4 @@
-### Have whenever with your rails app
-
-#### install whenever with bundler in your Gemfile
+#### Install whenever with bundler in your Gemfile
 
     gem 'whenever', :require => false
 
@@ -19,6 +17,11 @@ This will create an initial config/schedule.rb file for you.
       command "/usr/bin/my_great_command"
     end
 
+#### whenever variables
+
+    set :environment, :development
+    set :output, '/path/to/file'
+
 #### The `whenever` command
 
     $ cd /apps/my-great-project
@@ -34,4 +37,12 @@ This will write your crontab file.
     $ cd /apps/my-great-project
     $ whenever -s "environment=development"
 
-This will set your cron jobs runnint environment. Run `whenever --help` for a complete list of options.
+This will set your cron jobs running environment. Run `whenever --help` for a complete list of options.
+
+#### crontab command
+
+    crontab -l      # list cron jobs created by user
+    crontab -e      # edit crontab file of login user
+
+In default, the output result of cron jobs will be sent to mailbox of login
+user. The mailbox path is /var/spool/mail/username.
