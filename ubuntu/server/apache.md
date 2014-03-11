@@ -1,6 +1,19 @@
-### install apache 
+### install apache
 
     sudo apt-get install apache2
+
+### install xsendfile module
+
+    sudo apt-get update
+    sudo apt-get install libapache2-mod-xsendfile
+    sudo a2enmod xsendfile
+    sudo service apache2 restart
+
+### in config file
+
+    XSendFile On
+    XSendFilePath /apps/application/current/
+    XSendFilePath /apps/application/shared/bundle/
 
 ### apache config file
 
