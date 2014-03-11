@@ -16,7 +16,7 @@
 
     sudo service mysql start
 
-    mysql -u root -p 
+    mysql -u root -p
 
 ### Change mysql root password
 
@@ -25,6 +25,10 @@
 To setup root password for the first time, then use following command:
 
     mysqladmin -u root password new_password
+
+### export data from db
+
+    mysqldump -uroot ec_production > ec_production.sql
 
 ### import data to database
 
