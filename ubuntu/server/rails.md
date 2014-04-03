@@ -11,6 +11,14 @@ list of available runtimes (ExecJS::RuntimeUnavailable).
 
 Adding the two lines above to the Gemfile would fix the problem.
 
+### create a new rails project
+
+    rails new project_name --database mysql
+
+### create a model without test files
+
+    rails g model Product name:string --no-test-framework
+
 ### mysql
 
     sudo apt-get install mysql-sever
