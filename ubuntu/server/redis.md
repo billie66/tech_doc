@@ -10,6 +10,14 @@
 
     QUEUE=* rake environment resque:work
 
+### list all keys
+
+  keys *
+
+### remove all data
+
+  flushall | flushdb
+
 ### References
 
 * <http://redis.io/topics/quickstart>

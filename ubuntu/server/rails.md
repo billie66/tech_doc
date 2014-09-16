@@ -93,6 +93,8 @@ send email from your application
     RAILS_ENV=production rake db:drop
     RAILS_ENV=production rake db:drop:all
     RAILS_ENV=production rake assets:precompile
+    rails s -e production
+    rails c production
 
 ### rails cache
 
