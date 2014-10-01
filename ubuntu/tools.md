@@ -18,3 +18,11 @@ use gnome-subtitles
 ### convert jpg to png
 
     mogrify -format png /path/*.jpg  
+
+### java (amd64 or i386)
+
+    sudo apt-get install openjdk-7-jre-headless
+
+### references
+
+* http://askubuntu.com/questions/504276/how-do-i-use-apt-to-install-32-bit-openjdk-7-jre-on-azure-amd64-ubuntu-server-14

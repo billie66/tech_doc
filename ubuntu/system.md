@@ -74,6 +74,18 @@ fix it with this command:
 
     $ ln -s /usr/lib/insserv/insserv /sbin/insserv
 
+### enable bash autocompletion after updated bash
+
+open the file /etc/bash.bashrc, then uncomment the following lines:
+
+    # enable bash completion in interactive shells
+    #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    #    . /etc/bash_completion
+    #fi
+
+then restart terminal to make the changes work.
+
 ### how to stop being prompted to unlock the keyring
 
 http://askubuntu.com/questions/31786/chrome-asks-for-password-to-unlock-keyring-on-startup
+
