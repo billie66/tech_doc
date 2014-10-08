@@ -5,11 +5,11 @@
 ### Usage
 
 At first, type `tmux` in command line prompt to lauch tmux, then using the
-following key combination to control the session.
-
-  ctrl-b "      split the current pane into two, left and right.
+following key combination to control the session. More info to check `man tmux`
 
   ctrl-b %      split the current pane into two, top and bottom.
+
+  ctrl-b "      split the current pane into two, left and right.
 
   ctrl-b x      kill the current pane.
 

@@ -124,25 +124,12 @@ send email from your application
 
 * http header fields
 
-### get isodate format
-
-* strftime method in ruby
-
-* http://stackoverflow.com/questions/11235913/mmddyy-to-iso-timestamp-ruby-on-rails
-
-* monkey patch (config/initializers)
+### monkey patch (config/initializers)
 
   A monkey patch is a way to extend or modify the run-time code of dynamic
   languages without altering the original source code. This process has also
   been termed duck punching.
 
-* http://stackoverflow.com/questions/3420680/monkey-patching-in-rails-3
+### rails versions
 
-* http://stackoverflow.com/questions/5370061/format-date-time-in-find-operation-in-rails-3/7479550#7479550
-
-### references
-
-* <http://docs.rubygems.org/>
-* rbenv wiki
-* <http://rdoc.info/docs/rails/3.2.8/String>
-* <http://www.reddit.com/>
+https://rubygems.org/gems/rails/versions

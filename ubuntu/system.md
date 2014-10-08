@@ -76,7 +76,8 @@ fix it with this command:
 
 ### enable bash autocompletion after updated bash
 
-open the file /etc/bash.bashrc, then uncomment the following lines:
+open the file /etc/bash.bashrc, then uncomment the following lines except the
+first one:
 
     # enable bash completion in interactive shells
     #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
