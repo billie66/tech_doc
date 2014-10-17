@@ -133,3 +133,7 @@ send email from your application
 ### rails versions
 
 https://rubygems.org/gems/rails/versions
+
+### rails 4 caching
+
+http://www.slatestudio.com/blog/p/caching-in-rails-4-applications

@@ -34,7 +34,7 @@
 
 * on your host machine
 
-  billie@:~ ssh billie@192.168.56.10
+    billie@:~ ssh billie@192.168.56.10
 
 ### Enable shared folder
 
@@ -54,21 +54,21 @@ mounted to /media directory automatically, along with prefix "sf_".
 * In Ubuntu (maybe even connected via SSH?) type the following to add a mounting point for the shared folder:
 (manual mounting)
 
-  sudo mkdir /mnt/Projects
-  sudo chmod 777 /mnt/Projects
-  sudo mount -t vboxsf -o uid=1000,gid=1000 Projects /mnt/Projects
+    sudo mkdir /mnt/Projects
+    sudo chmod 777 /mnt/Projects
+    sudo mount -t vboxsf -o uid=1000,gid=1000 Projects /mnt/Projects
 
 Here the automatic mounting point is /media/sf_Projects.
 
 * Now enable auto-mounting. For this, we open the file which is always run at the start of Ubuntu:
 
-  sudo vim /etc/rc.local
+    sudo vim /etc/rc.local
 
 maybe use file /etc/fstab, (specified by virtualbox official doc)
 
 * Add the following line above(!!!) the line with “exit 0”:
 
-  sudo mount -t vboxsf -o uid=1000,gid=1000 Projects /mnt/Projects
+    sudo mount -t vboxsf -o uid=1000,gid=1000 Projects /mnt/Projects
 
 * save and close vim
 
