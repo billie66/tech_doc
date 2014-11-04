@@ -12,11 +12,23 @@
 
 ### get the lastest version of a gem
 
-  gem list -r font-awesome-rails
+    gem list -r font-awesome-rails
+
+### install ruby gems in a local directory
+
+    gem install --user-intall gem_name
+
+### rubygems environment
+
+    gem env
+
+### check rubygems sources
+
+    gem sources
 
 ### install node.js
 
-  $ sudo apt-get install python-software-properties
-  $ sudo apt-add-repository ppa:chris-lea/node.js
-  $ sudo apt-get update
-  $ sudo apt-get install nodejs
+    $ sudo apt-get install python-software-properties
+    $ sudo apt-add-repository ppa:chris-lea/node.js
+    $ sudo apt-get update
+    $ sudo apt-get install nodejs
