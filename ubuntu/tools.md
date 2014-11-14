@@ -17,11 +17,15 @@ use gnome-subtitles
 
 ### convert jpg to png
 
-    mogrify -format png /path/*.jpg  
+    mogrify -format png /path/*.jpg
 
 ### java (amd64 or i386)
 
     sudo apt-get install openjdk-7-jre-headless
+
+### json_reformat
+
+    sudo apt-get install yajl-tools
 
 ### references
 
