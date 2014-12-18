@@ -137,3 +137,7 @@ https://rubygems.org/gems/rails/versions
 ### rails 4 caching
 
 http://www.slatestudio.com/blog/p/caching-in-rails-4-applications
+
+### rake tasks
+
+http://edelpero.svbtle.com/everything-you-always-wanted-to-know-about-writing-good-rake-tasks-but-were-afraid-to-ask

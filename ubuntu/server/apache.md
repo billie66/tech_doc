@@ -24,6 +24,7 @@
     <VirtualHost *:80>
         ServerAdmin webmaster@book
         ServerName book
+        PassengerRuby /home/peter/.rbenv/versions/2.1.2/bin/ruby
         DocumentRoot /home/billie/book/public
         ErrorLog /home/billie/book/log/error.log
         CustomLog /home/billie/book/log/access.log combined
