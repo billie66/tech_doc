@@ -240,3 +240,10 @@ of tty0-tty6.
 
     chown billie:billie filename
 
+### delete multiple files once
+
+    rm file[123].md
+
+above command is equivalent to typing:
+
+    rm file{1,2}.md

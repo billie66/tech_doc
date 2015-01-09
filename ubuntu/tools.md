@@ -7,6 +7,10 @@ use gnome-subtitles
     sudo apt-get install gcin
     trad2sim
 
+### check ubuntu version
+
+    lsb_release -a
+
 ### ffmpeg
 
 #### Create a thumbnail image every X seconds of the video
