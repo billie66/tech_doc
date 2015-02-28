@@ -9,3 +9,7 @@ check conflict area, clean the code, the run commands
     git add .
     git rebase --continue
 
+### merge the first two commits
+
+    git rebase -i HEAD^^
+
