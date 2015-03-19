@@ -247,3 +247,8 @@ of tty0-tty6.
 above command is equivalent to typing:
 
     rm file{1,2}.md
+
+### wget all files in a remote diretory named images
+
+    wget -r -l1 --no-parent http://www.example.com/images
+
