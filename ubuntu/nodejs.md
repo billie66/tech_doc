@@ -8,9 +8,18 @@
 
 ### install css-sprite to generate CSS Sprites
 
+If you want to use css-sprite on your cli install with:
+
     sudo npm install -g css-sprite
 
 Note: please wait with patience, it will take a few minutes to finish.
+
+How to use css-sprite on your cli, run the following comand:
+
+    css-sprite out-dir input-dir/* -s css-dir
+
+Here you should specify image files needed, css-dir will save the
+result css file named sprite.css, which can be renamed by -n option.
 
 ### reference
 
