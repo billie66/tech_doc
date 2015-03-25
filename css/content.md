@@ -14,6 +14,11 @@ what it looks like:
 
   output: Email address: example@gmail.com
 
+
+### sticky footer
+
+* http://www.cssstickyfooter.com/using-sticky-footer-code.html
+
 ### tutorial
 
 * http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/
