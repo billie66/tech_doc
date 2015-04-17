@@ -2,6 +2,12 @@
 
 * switch between windows: cmd + `
 
+* remove a tag: cmd + '
+
+* rename a tag: shift + cmd + k
+
+* wrap some html code: shift + ctr + w
+
 ### coffeescript syntax highlighting
 
 To install [package control](https://packagecontrol.io/) for Sublime Text 2, type ctrl + ` to
