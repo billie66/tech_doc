@@ -141,3 +141,19 @@ http://www.slatestudio.com/blog/p/caching-in-rails-4-applications
 ### rake tasks
 
 http://edelpero.svbtle.com/everything-you-always-wanted-to-know-about-writing-good-rake-tasks-but-were-afraid-to-ask
+
+### view rails help
+
+  rails -h
+  rails g -h
+  rails g scaffold -h
+
+### Don't generate assets and helper files in default
+
+Add this lines in the application.rb file of a rails project:
+
+  config.generators do |g|
+    g.assets false
+    g.helper false
+  end
+
