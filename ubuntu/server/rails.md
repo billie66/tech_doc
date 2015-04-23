@@ -157,3 +157,8 @@ Add this lines in the application.rb file of a rails project:
     g.helper false
   end
 
+### DB problems
+
+If your rails project use mysql database that needs password to be connected
+as root user, so you should add mysql password to database.yml file.
+

@@ -1,3 +1,1 @@
-### take a screenshot
-
-    shift+command+4
+* take a screenshot  `shift+cmd+4 `
