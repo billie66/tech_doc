@@ -2,7 +2,7 @@
 
 * maximize the google chrome window on Mac OS X
 
-Quick version: press shift key, at the same time click the green button on the
+Quick version: press shift key, at the same time click the green button in the
 title bar of chrome.
 
 Add a new keyboard shortcut, under system preference > keyboard > keyboard
