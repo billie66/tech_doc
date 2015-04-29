@@ -1,10 +1,18 @@
 ### Variable hoisting
 
-
 ### Function hoisting
-
 
 ### References
 
 http://www.mkyong.com/jquery/how-to-select-a-radio-button-with-jquery/
+
+### return statement
+
+cancel the default browser behaviour, for example, a form submission,
+
+    return false
+
+is equivalent to :
+
+    event.preventDefault ? event.preventDefault : event.returnValue = false
 
