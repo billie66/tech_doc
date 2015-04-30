@@ -14,6 +14,7 @@ what it looks like:
 
   output: Email address: example@gmail.com
 
+### min-width usage
 
 ### sticky footer
 
