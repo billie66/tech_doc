@@ -162,3 +162,12 @@ Add this lines in the application.rb file of a rails project:
 If your rails project use mysql database that needs password to be connected
 as root user, so you should add mysql password to database.yml file.
 
+### get the debug message from rake tasks to stdout
+
+    Rails.logger = Logger.new(STDOUT)
+    Rails.logger.debug "output message"
+
+actually the simplest way is to call `puts` method, for instance,
+
+    puts "output message"
+
