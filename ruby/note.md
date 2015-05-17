@@ -12,6 +12,15 @@ how to covert a unix timestamp to date, for example `1423888155`,
 
     ruby -c test.rb
 
+### encode url
+
+escape special characters in urls
+
+    require 'uri'
+    url = 'http://site.com/big cat.png'
+    puts URI.encode(url)
+    => 'http://site.com/big%20cat.png'
+
 ### ruby metaprogramming
 
 http://www.medihack.org/2011/03/15/intend-to-extend/
