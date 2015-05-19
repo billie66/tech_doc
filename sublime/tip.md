@@ -1,5 +1,11 @@
 ### keybord shortcuts
 
+* open a new line before: shift + cmd + enter
+
+* open a new line after: cmd + enter
+
+* delete a line: cmd + x
+
 * switch between windows: cmd + `
 
 * remove a tag: cmd + '
