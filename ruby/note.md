@@ -21,6 +21,16 @@ escape special characters in urls
     puts URI.encode(url)
     => 'http://site.com/big%20cat.png'
 
+### extract substring wrapping a certain words
+
+    str = 'this is a html element <em>rails</em>, which will highlight the word rails'
+    a = str.split('<em>rails</em>')
+    result = a.first.slice(-6..-1) + '<em>rails</em>' + a.last.slice(0..10)
+
+or, use the `index` method of string
+
+    i = str.index('<em>rails</em>')
+
 ### ruby metaprogramming
 
 http://www.medihack.org/2011/03/15/intend-to-extend/
