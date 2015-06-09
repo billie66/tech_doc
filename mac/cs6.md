@@ -11,3 +11,32 @@ secondly, open the image on cs6, crop and resize it, bigger than
 
 finally, build a new file, the width is 800px, the height is 600px, paste the
 selected image into the new file, save the file with png format.
+
+* use rulers
+
+enable rulers, go to menu View -> rulers, then horizontal and vertical rulers will show up.
+
+draw a horizontal guide, click the horizontal ruler, and press the left mouse button.
+
+change guides color, go to Photoshop -> preferences -> Guides, Grid & Slices
+
+* crop a image
+
+1. find the layer where the target image lives
+
+2. right click mouse, select `Covert to Smart Object`
+
+3. right click mouse again, select `Edit Contents`, then open a annoymous psd file containing the desired image
+
+4. go to menu Image -> Trim..., trim all extra transparent pixels to get the presice size of the image
+
+5. save the file as image format
+
+* distance between two elements
+
+zoom in the file until see the pixels, draw two guides between two elements, then use Rectangular Marquee Tool
+to draw a rectangle between two guidelines to get the distance
+
+* open info panel
+
+go to menu View -> Info, after selected a part area, you can get the width and height of the area from the info panel
