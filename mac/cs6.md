@@ -55,4 +55,8 @@ go to menu View -> Info, after selected a part area, you can get the width and h
 
 * smart objects
 
-* Preserving the quality of your layer is one of the most important features of Smart Objects.
+Preserving the quality of your layer is one of the most important features of Smart Objects.
+
+* References
+
+http://design.tutsplus.com/tutorials/10-things-you-need-to-know-about-smart-objects-in-photoshop--cms-20268

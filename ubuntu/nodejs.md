@@ -21,7 +21,11 @@ How to use css-sprite on your cli, run the following comand:
 Here you should specify image files needed, css-dir will save the
 result css file named sprite.css, which can be renamed by -n option.
 
+### npm global without sudo
+
 ### reference
 
 * https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories
+
+* https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 
