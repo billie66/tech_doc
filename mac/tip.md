@@ -15,3 +15,6 @@ keyboard shortcut for Zoom be `shift+command+m`
 
 官方文档 <https://developer.chrome.com/devtools/docs/device-mode>
 
+* start a http server
+
+    python -m SimpleHTTPServer
