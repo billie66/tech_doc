@@ -27,3 +27,7 @@ After installing the package manager and restarting the editor:
 
 Then reopen the coffeescript file, the code will be highlighted.
 
+### the default file save location
+
+The default save location is the location of the last active saved file.
+

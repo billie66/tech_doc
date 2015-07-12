@@ -20,3 +20,11 @@ is equivalent to :
 
 * http://stackoverflow.com/questions/5943630/basic-example-of-using-ajax-with-jsonp
 * http://im.qq.com/macqq/index.shtml
+
+### what is a polyfill?
+
+>polyfill is essentially code that would allow you to have some specific functionality that you expect in current or “modern” browsers to also work in other browsers that do not have the support for that functionality built in.
+>
+>So, you can think of the technique of polyfilling as a two step process in which the first step is detecting which features are present in a given browser, and then "patching" in support with helper scripts (like Javascript) for any missing features in that browser.
+
+* http://www.programmerinterview.com/index.php/html5/html5-polyfill/
