@@ -23,9 +23,15 @@ result css file named sprite.css, which can be renamed by -n option.
 
 ### npm global without sudo
 
+* https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+
+### Browsersync
+
+>But BrowserSync does a lot more than just reloading. The coolest thing it
+does is synchronising between multiple browsers (and platforms)
+
 ### reference
 
 * https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories
 
-* https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 
