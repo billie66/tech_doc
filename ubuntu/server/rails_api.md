@@ -37,3 +37,9 @@ http://craftingruby.com/posts/2014/01/13/callbacks-and-dirty-objects-in-rails.ht
       <%= f.submit %>
     <% end %>
 
+* to_s
+
+    Loading development environment (Rails 4.1.6)
+    irb(main):001:0> Time.now.to_s :number
+    => "20150726132302"
+
