@@ -18,3 +18,7 @@ keyboard shortcut for Zoom be `shift+command+m`
 * start a http server
 
     python -m SimpleHTTPServer
+
+* pretty print json
+
+    cat unformated.json | python -m json.tool > formated.json
