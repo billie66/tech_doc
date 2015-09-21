@@ -20,6 +20,14 @@ Within the command line, run the following command to remove this package:
 
 As a result, the data from the `Lists` collection will not show up.
 
+###
+
+### unique template name
+
+```
+Uncaught Error: There are multiple templates named 'navigation'. Each template needs a unique name.
+```
+
 ### upload image
 
 <https://medium.com/@victorleungtw/how-to-upload-files-with-meteor-js-7b8e811510fa>

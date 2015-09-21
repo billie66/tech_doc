@@ -8,6 +8,7 @@
 
 * get all collection methods, see `posts` collection, type `db.posts.help()`
 
+* get all the records of the collection users, type `db.users.find()`
 
 ### mongo shell quick reference
 

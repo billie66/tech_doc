@@ -28,3 +28,14 @@ is equivalent to :
 >So, you can think of the technique of polyfilling as a two step process in which the first step is detecting which features are present in a given browser, and then "patching" in support with helper scripts (like Javascript) for any missing features in that browser.
 
 * http://www.programmerinterview.com/index.php/html5/html5-polyfill/
+
+###  Self-executing anonymous function
+
+    !function(){}();
+
+which is equivalent to:
+
+    (function(){})();
+
+* http://stackoverflow.com/questions/3755606/what-does-the-exclamation-mark-do-before-the-function
+
