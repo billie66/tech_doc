@@ -83,6 +83,11 @@ meteor 和 react 的结合，再看一遍 getMeteorData 的用途
 
 react 组件中可以直接使用 meteor 模块的接口，比方说 Meteor.user()，那还用使用 getMeteorData() 获取当前登录用户的信息吗？
 
+### Methods location
+
+Methods 所在的位置，既可以在 client 端执行也可以在 server
+端执行，可以参考[Optimistic UI](http://info.meteor.com/blog/optimistic-ui-with-meteor-latency-compensation)
+
 ### 第四部分 部署到服务器
 
 http://meteortips.com/deployment-tutorial/
