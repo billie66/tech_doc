@@ -3,7 +3,7 @@
 首先安装 mui，之前介绍 meteor 中使用 react-router 的时候，我们已经知道了如何在 meteor 项目中使用 npm 软件包，在项目根目录下面的 package.json 文件中添加：
 
 ```js
-"material-ui": "0.10.1",
+"material-ui": "0.10.4",
 "react-tap-event-plugin": "0.1.7"
 ```
 
@@ -86,3 +86,10 @@ ActionAlarm = require('material-ui/lib/svg-icons/action/alarm');
 ```
 
 那这个图标路径 `material-ui/lib/svg-icons/action/alarm` 是怎么知道的呢？到 mui 的安装目录看一下，会找到一个 lib 目录，jsx 文件编译之后的存放位置，mui 提供的所有组件都可以在 lib 目录下找到。
+
+mui 的文档网站是开源的，位于 mui 项目的 docs 目录下，docs/README.md 文件介绍了如何在本地把网站运行起来。
+
+mui 组件遵照 ES6 的编码方式，目前在 meteor 所使用的 react 组件中还不能直接使用。
+
+mui 文档网站的响应式如何实现的？
+
