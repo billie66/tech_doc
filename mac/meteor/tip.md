@@ -46,3 +46,5 @@ standard-minifiers, and meteor-platform was removed.
 
 <http://dweldon.silvrback.com/get-text>
 
+<http://stackoverflow.com/questions/28105957/meteor-and-the-private-directory>
+

@@ -1,0 +1,20 @@
+### beian (备案)
+
+阿里云备案登录系统 https://beian.gein.cn/account/login.htm?callback=http://aliyun.gein.cn
+
+### 第二次备案
+
+* 不需要申请幕布拍照，直接上传第一次备案的幕布照片
+* 不需要邮寄签名的核验单
+
+### 申请阿里云备案服务号
+
+登录 aliyun.com, 进入管理控制台，点击备案管理 -> 备案服务号管理 -> ECS -> 申请
+
+一台 ECS 最多可以申请5个备案服务号
+
+点击备案服务号管理，查看已绑定的备案服务号
+
+### github issue
+
+https://github.com/happypeter/haoduoshipin/issues/318
