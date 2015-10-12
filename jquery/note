@@ -42,8 +42,9 @@ which is equivalent to:
 ### check if a variable is an array
 
     let arr = [];
-    $.isArray(arr) // print true
-    Array.isArray(arr)
+    $.isArray(arr) // the first one
+    Array.isArray(arr) // the second method
+    Object.prototype.toString.call( arr ) === '[object Array]' // the third method
 
 using typeof can not get the type of variable arr, the output of typeof(arr) will be `object`
 
