@@ -93,3 +93,78 @@ mui 组件遵照 ES6 的编码方式，目前在 meteor 所使用的 react 组�
 
 mui 文档网站的响应式如何实现的？
 
+不能使用 media query，通过 js 直接判断窗口大小，不同窗口使用不同的样式
+
+### 升级 MUI v0.12.3
+
+Meteor 版本为 v1.2.0.1
+
+MUI 更新很快，变动也比较大，一直想着升级到 v0.12.x，但没有成功，所以一些新特性，如 controlled tabs 就不能使用，很不方便。
+
+MUI 不能升级，网上也找不到答案，心里总是惦记着这个事，今天又查看了一下 MUI 的 CHANGLOG，发现 MUI 已经更新到 v0.12.3 了，并且降低了 react 的版本（~0.13）
+
+于是，我又试着升级了一下，成功了。packages.json 文件的内容如下：
+
+```js
+{
+  "material-ui": "0.12.3",
+  "react-tap-event-plugin": "0.1.7"
+}
+```
+
+虽然 MUI 升级成功了，但是不起作用，因为使用的 MUI v0.10.4 的代码规则，没有报告错误，试了一下 controlled tabs 组件仍然不生效。
+
+参考这个 [issue](https://github.com/mrphu3074/react-material-ui/issues/15)，就可以解决问题，
+
+话说十几天前还没有答案呢，看来越来越多的开发者加入了 MUI，Meteor，React 阵营。
+
+揭晓答案！删除 NPM 模块 react-tap-event-plugin， 因为 MUI v0.12.3 版本会自动安装 react-tap-event-plugin 插件，不需要重复安装。
+现在的 packages.json 文件的内容如下：
+
+```js
+{
+  "material-ui": "0.12.3"
+}
+```
+
+操作完成之后，浏览器 console 中就出现报错信息了，因为 MUI v0.12.x 之后的主题管理方式改变了，所以修改代码：
+
+```js
+const ThemeManager = Styles.ThemeManager;
+const DefaultRawTheme = Styles.LightRawTheme;
+
+childContextTypes: {
+  muiTheme: React.PropTypes.object
+},
+
+getChildContext() {
+  return {
+    muiTheme: ThemeManager.getMuiTheme(DefaultRawTheme),
+  };
+},
+```
+
+做了这些修改之后，就可以在 Meteor 项目中使用新版的 MUI 了。
+
+另外，根据这个实例，https://github.com/rkstar/meteor-material-ui-example，app.browserify.js 文件内容可以这样写：
+
+```js
+// NOTE:
+// "let" keyword will not work here!  it throws errors.
+// this must either be declared without a keyword (global) or with "var"
+var injectTapEventPlugin = require("react-tap-event-plugin")
+
+//Needed for onTouchTap
+//Can go away when react 1.0 release
+//Check this repo:
+//https://github.com/zilverline/react-tap-event-plugin
+injectTapEventPlugin()
+React.initializeTouchEvents(true)
+
+// init material ui
+mui = require('material-ui')
+```
+
+还有一点值得注意，MUI v0.12.3，使用的 React 版本为 v0.14.0。
+
+安装 React-router 的时候，也会安装 React
