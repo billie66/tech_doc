@@ -22,3 +22,12 @@ keyboard shortcut for Zoom be `shift+command+m`
 * pretty print json
 
     cat unformated.json | python -m json.tool > formated.json
+
+* uncompress 7z archive
+
+    $ file font.7z
+    font.7z: 7-zip archive data, version 0.3
+    $ brew install p7zip
+    $ 7z e -ofont font.7z
+
+`-ofont` output directory name is `font`
