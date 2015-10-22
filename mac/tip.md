@@ -31,3 +31,9 @@ keyboard shortcut for Zoom be `shift+command+m`
     $ 7z e -ofont font.7z
 
 `-ofont` output directory name is `font`
+
+* uncompress rar archive data
+
+    brew install unrar
+
+http://unix.stackexchange.com/questions/94837/having-trouble-uncompressing-a-few-files
