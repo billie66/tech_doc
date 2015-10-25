@@ -37,3 +37,9 @@ keyboard shortcut for Zoom be `shift+command+m`
     brew install unrar
 
 http://unix.stackexchange.com/questions/94837/having-trouble-uncompressing-a-few-files
+
+* xcode problem
+
+>Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
+
+run command `sudo xcodebuild -license` or directly open xcode and agree the agreement
