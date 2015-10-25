@@ -38,6 +38,11 @@ standard-minifiers, and meteor-platform was removed.
 
 <https://medium.com/@victorleungtw/how-to-upload-files-with-meteor-js-7b8e811510fa>
 
+### form validation
+
+* http://douglashirsh.com/2015/02/06/meteor-js-part-4-editing-input-validation/
+* http://jsfiddle.net/chicagogrooves/y18er7wr/
+
 ### docs
 
 <https://adilapapaya.wordpress.com/2014/03/12/things-i-wish-someone-told-me-when-i-first-started-learning-meteor-js/>

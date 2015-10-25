@@ -1,112 +1,60 @@
-### Install mongodb on ubuntu
+### Install mongodb on ubuntu server 14.04
 
-* Append the below line to the end of the file /etc/apt/sources.list
-    
-    deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+The tutorial is from https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
-* Update package
+* Import the public key used by the package management system.
+
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+
+* Create a list file for MongoDB. (ubuntu 14.04)
+
+    echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+
+* Reload local package database.
 
     sudo apt-get update
 
-* Add GPG key
+* Install the latest stable version of MongoDB.
 
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+    sudo apt-get install -y mongodb-org
 
-* Install mongodb-10gen
+* Start MongoDB
 
-    sudo apt-get install mongodb-10gen
+    sudo service mongod start
 
-* Post-Installation
+* Verify that MongoDB has started successfully
 
-Now, MongoDB is installed, started, and auto start MongoDB script is
-generated to `/etc/init/mongodb.conf` and `/etc/init.d/mongodb`. In addition, all
-MongoDB files are copied to `/usr/bin` folder.
+    ps aux | grep mongod
 
-The main configuration file `mongodb.conf` is located at `/etc/mongodb.conf`, 
-change the values to customize your mongoDB server.
+* Stop MongoDB
 
-* Lauch mongodb server
+    sudo service mongod stop
 
-    --- On ubuntu 12.04 ---
-    rm /var/lib/mongodb/mongod.lock ( can't run two deamon simultaneously)
-    sudo service mongodb start
-    --- end ---
+* Restart MongoDB
 
-* Lauch mongodb server
+    sudo service mongod restart
 
-    --- On ubuntu 11.04 ---
-    mkdir /data/db/
-    mkdir /data/db/journal
-    rm  /data/db/mongod.lock
-    mongod &
-    --- end ---
+* Remove Packages
 
-* Verification
+    sudo apt-get purge mongodb-org*
 
-To verify it, just connect it with “mongo”
+* Remove Data Directories
 
-<http://www.mkyong.com/mongodb/how-to-install-mongodb-on-ubuntu/>
+    sudo rm -r /var/log/mongodb
+    sudo rm -r /var/lib/mongodb
 
-Once MongoDB is installed and configured you can visit http://localhost:28017/
-to see if it’s working.
+The following document comes from [here](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-meteor-js-application-on-ubuntu-14-04-with-nginx)
 
-### check mongodb on or off
+To be sure that access from external hosts is not possible, we execute the following to be sure that MongoDB is bound to 127.0.0.1. Check with this command:
 
-* chkconfig mongodb
+    netstat -ln | grep -E '27017|28017'
 
-### rails & mongodb (for vplayer.net)
+Expected output:
 
-* why install memcashed in development env?(for cache all assets files)
+    tcp        0      0 127.0.0.1:27017         0.0.0.0:*               LISTEN
+    tcp        0      0 127.0.0.1:28017         0.0.0.0:*               LISTEN
+    unix  2      [ ACC ]     STREAM     LISTENING     6091441  /tmp/mongodb-27017.sock
 
-Since the setting in the file config/environment/development.rb:
+In order to have daily backups available in case something goes wrong, we can optionally install a simple command as a daily cron job. Create a file /etc/cron.d/mongodb-backup:
 
-  config.action_controller.perform_caching = true
-
-so if change the value from `true` to `false`, then the assets will not be cached.
-
-* sudo apt-get insatll libxml2-dev libxslt-dev (for nokogiri)
-* sudo apt-get install -y advancecomp gifsicle jpegoptim libjpeg-progs optipng pngcrush (for image_optim)
-* sudo apt-get install imagemagick (for uploading images)
-* bundle install
-* sudo service mongodb start
-* rake db:drop
-* rake db:seed
-* upload an app
-
-* install java, google `webupd8 java ppa`, then click the first item
-
-  sudo add-apt-repository ppa:webupd8team/java
-  sudo apt-get update
-  sudo apt-get install oracle-java7-installer
-
-* go to vendor/solr/sunspot_solr\_mmseg4j, run the command below
-
-  java -jar start.jar
-
-### tips
-
-* reference && embedded association
-
-    When you’re deciding which of these approaches is to use you need to ask
-    yourself if you’ll ever need the associated records to stand on their own
-    or if you’ll always be accessing them through their parent model. 
-
-* User.skip(2).first
-
-* show dbs
-
-* use dbname
-
-* show collections
-
-* db.blogs.find()
-
-* db.blogs.help()
-
-* db.help()
-
-* db.users.findOne({name: 'zgs'})
-
-Here 'role_ids' is an array
-
-* db.users.update({_id: ObjectId("5175fc6fcd880b115c000001")}, {$push: {role_ids: ObjectId("5175fc6fcd880b115c000001")}})
+    @daily root mkdir -p /var/backups/mongodb; mongodump --db todos --out /var/backups/mongodb/$(date +'\%Y-\%m-\%d')
