@@ -48,3 +48,27 @@ which is equivalent to:
 
 using typeof can not get the type of variable arr, the output of typeof(arr) will be `object`
 
+### no-greedy regexp modifiers
+
+```
+*  - zero or more
+*? - zero or more (non-greedy)
++  - one or more
++? - one or more (non-greedy)
+?  - zero or one
+?? - zero or one (non-greedy)
+```
+
+the test string is , i want get the frist substring `---\ntitle: beauty\n---`, how the regexp is written?
+
+```js
+let str = "---\ntitle: beauty\n---\nbeast\n---";
+str.match(/^\-{3}[^]*?\-{3}/)
+```
+
+Note: the `[^]` symbol stands for matching multiple lines.
+[Regexp MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#Using_regular_expression_on_multiple_lines)
+
+### hash data
+
+https://github.com/blueimp/JavaScript-MD5
