@@ -1,10 +1,13 @@
+参考文档：
+
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-meteor-js-application-on-ubuntu-14-04-with-nginx
 
-部署到阿里云服务器
+### 部署到阿里云服务器
 
 * 系统已经安装了 nodejs 和 nginx，并且 meteor.haoduoshipin.com 已经能够访问
 
 * 安装 mongodb 成功
+
 
 * build meteor app on local machine
 
@@ -24,27 +27,72 @@ scp haoduoshipin.tar.gz hostname:~/meteor
 ```
 cd meteor
 tar -zxf haoduoshipin.tar.gz
-cd bundle
+ls
+```
+
+meteor 目录包含如下文件：
+
+```
+main.js  programs  README  server  star.json
+```
+
+其中 README 文件内容：
+
+```
+This is a Meteor application bundle. It has only one external dependency:
+Node.js 0.10.40 or newer. To run the application:
+
+  $ (cd programs/server && npm install)
+  $ export MONGO_URL='mongodb://user:password@host:port/databasename'
+  $ export ROOT_URL='http://example.com'
+  $ export MAIL_URL='smtp://user:password@mailhost:port/'
+  $ node main.js
+
+Use the PORT environment variable to set the port where the
+application will listen. The default is 80, but that will require
+root on most systems.
+
+Find out more about Meteor at meteor.com.
+```
+
+下面就根据 README 文件中的步骤操作, 首先按照 NPM 模块：
+
+```
+cd programs/server && npm install
+```
+
+然后，回到应用的根目录 ~/meteor，导出一些环境变量：
+
+```
 export MONGO_URL=mongodb://localhost:27017/meteor
 export ROOT_URL=http://meteor.haoduoshipin.com
 export PORT=8000
+```
+
+最后启动应用：
+
+```
 node main.js
 ```
 
-start application with the command `node main.js`, print the following error messages:
+### 遇到的问题
+
+启动应用 `node main.js`, 一般会打印出如下错误信息：
 
 >Error: /home/peter/meteor/bundle/programs/server/npm/npm-bcrypt/node_modules/bcrypt/build/Release/bcrypt_lib.node: invalid ELF header
 
-The bcrypt module compiled on mac does not work on linux, so the solution is to reinstall bcrypt on linux
+这是因为在 mac 上编译的 bcrypt 模块，不能在 Linux 系统上工作，所以需要在 Linux 系统上重新安装 bcrypt 模块：
 
 ```bash
-cd /home/peter/meteor/bundle/programs/server/npm/npm-bcrypt/node_modules/
+cd ~/meteor/bundle/programs/server/npm/npm-bcrypt/node_modules/
 npm install bcrypt
 ```
 
-* configuring Upstart
+### 配置 Upstart
 
-create a new file named /etc/init/meteor.conf filling with the content below, you should use root status
+手动运行 `node main.js` Meteor 应用运行在前台，当退出登录之后，应用就终止了。那如何让应用始终运行呢，可以配置 Upstart
+
+1. create a new file named /etc/init/meteor.conf filling with the content below, you should use root status
 
 ```
 # upstart service file at /etc/init/meteor.conf
@@ -96,7 +144,7 @@ script
 end script
 ```
 
-then check the syntax of file `/etc/init/meteor.conf`, with the command:
+2. then check the syntax of file `/etc/init/meteor.conf`, with the command:
 
 ```
 init-checkconf /etc/init/meteor.conf
@@ -106,10 +154,39 @@ if there are not syntax errors, the output of this command is:
 
 >File /etc/init/testjob.conf: syntax ok
 
-start the Upstart jobs
+3. start the Upstart jobs
 
 ```
 sudo service meteor start
 ```
 
-then your application will run in the background
+4. check if the meteor service is running
+
+```
+status meteor
+```
+
+这样，Meteor 应用就始终在后台运行了。
+
+### 再次部署
+
+第一次部署成功之后，再部署就轻车熟路了，重复下面的操作
+
+* 本地开发机器
+
+```
+meteor build .
+scp appname.tar.gz hostname.com:~/appname
+```
+
+* 远端服务器
+
+```
+cd ~/appname
+tar -zxf appname.tar.gz
+cd bundle/programs/server
+npm install
+cd npm/npm-bcrypt/node_modules/
+npm install bcrypt
+restart meteor
+```
