@@ -39,7 +39,9 @@ App = React.createClass({
 
 ### 使用 Tabs 组件
 
-对于 MUI 组件，虽然也能添加 calssName，但是优先级要低于 inline style，若修改 MUI 组件的样式，就要用 inline style
+对于 MUI 组件，虽然也能添加 calssName，但是优先级要低于 inline styles，若修改 MUI 组件的样式，使用 inline styles
+
+https://facebook.github.io/react/tips/inline-styles.html
 
 MUI Tabs 的文档 http://material-ui.com/#/components/tabs
 
