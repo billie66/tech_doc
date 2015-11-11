@@ -95,7 +95,7 @@ Meteor.startup(function() {
 首先，需要导入 history 模块，修改 client/lib/app.browserify.js 文件
 
 ```
-history = require("history");
+History = require("history");
 ```
 
 修改 startup.jsx 文件，添加一行代码
