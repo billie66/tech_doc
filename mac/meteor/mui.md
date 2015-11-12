@@ -1,19 +1,18 @@
-### meteor 中使用 material-ui（简称 mui）
+### meteor 中使用 material-ui（简称 mui v0.13.1）
 
 首先安装 mui，之前介绍 meteor 中使用 react-router 的时候，我们已经知道了如何在 meteor 项目中使用 npm 软件包，在项目根目录下面的 package.json 文件中添加：
 
 ```js
-"material-ui": "0.13.2",
-"react-tap-event-plugin": "0.2.1"
+"material-ui": "0.13.1"
 ```
 
-保存之后，在命令行中运行 meteor 命令，安装 mui 及其所依赖的 react-tap-event-plugin 插件。那这两个 npm 包安装位置在哪里呢？
+保存之后，在命令行中运行 meteor 命令，安装 mui，同时会安装 react-tap-event-plugin 模块。那这两个 npm 模块安装位置在哪里呢？
 
 ```bash
 cd ./packages/npm-container/.npm/package/node_modules/
 ```
 
-为什么要安装 react-tap-event-plugin 插件呢？因为 mui 的一些组件需要借助它监听 touch 事件。不过，这种依赖是暂时的，等到 react v1.0 发布之后，就不再需要这个插件了。
+react-tap-event-plugin 模块的用处？因为 mui 的一些组件需要借助它监听 touch 事件。不过，这种依赖是暂时的，等到 react v1.0 发布之后，就不再需要这个插件了。
 ```
 
 安装好 mui 之后，需要把它导出，才能在项目中使用。进入 client/lib 目录，打开 app.browserify.js 文件，添加两行代码：
