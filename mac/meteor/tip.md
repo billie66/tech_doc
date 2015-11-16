@@ -43,6 +43,14 @@ standard-minifiers, and meteor-platform was removed.
 * http://douglashirsh.com/2015/02/06/meteor-js-part-4-editing-input-validation/
 * http://jsfiddle.net/chicagogrooves/y18er7wr/
 
+### user experience
+
+* https://themeteorchef.com/blog/ux-considerations-in-meteor-applications/
+
+* https://themeteorchef.com/snippets/loading-patterns/
+
+* http://zh.discovermeteor.com/chapters/animations/
+
 ### docs
 
 <https://adilapapaya.wordpress.com/2014/03/12/things-i-wish-someone-told-me-when-i-first-started-learning-meteor-js/>

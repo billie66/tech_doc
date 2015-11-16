@@ -10,6 +10,44 @@
 
 * get all the records of the collection users, type `db.users.find()`
 
+
+### check all the records of comments collection of meteor database
+
+Note: meteor app should run
+
+```
+meteor mongo
+use meteor
+show collections
+db.comments.find()
+db.comments.find({postId: 1}).count()
+```
+
+### delete all of the records of comments collection
+
+```
+db.comments.remove({})
+```
+
+You can only remove one record at a time on browser console
+
+```
+Comments.remove('_id')
+Comments.remove({postId: 1})
+```
+
+show all the records of comments collection
+
+```
+Comments.find().fetch()
+```
+
+the number of comments
+
+```
+Comments.find().count()
+```
+
 ### import data to mongodb
 
 向 mongodb 导入数据需要用到 mongoimport 工具，meteor 自带的 mongodb 不提供这个工具，所以要在系统中重新安装 mongodb
