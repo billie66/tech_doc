@@ -1,3 +1,11 @@
+### enable check API for meteor v1.2.1
+
+```
+meteor add check
+meteor add ejson
+```
+usage `check(postId, Number)`
+
 ### manage packages
 
 * install a package `meteor add package`
