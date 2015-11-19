@@ -166,6 +166,12 @@ sudo service meteor start
 status meteor
 ```
 
+5. restart the meteor service
+
+```
+sudo service meteor restart
+```
+
 这样，Meteor 应用就始终在后台运行了。
 
 ### 再次部署
@@ -188,5 +194,5 @@ cd bundle/programs/server
 npm install
 cd npm/npm-bcrypt/node_modules/
 npm install bcrypt
-restart meteor
+sudo service meteor restart
 ```
