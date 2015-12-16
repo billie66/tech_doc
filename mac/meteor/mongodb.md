@@ -48,6 +48,12 @@ the number of comments
 Comments.find().count()
 ```
 
+### update
+
+```
+db.users.update({username: 'aa'},{$set: {team: 4}})
+```
+
 ### import data to mongodb
 
 向 mongodb 导入数据需要用到 mongoimport 工具，meteor 自带的 mongodb 不提供这个工具，所以要在系统中重新安装 mongodb

@@ -72,3 +72,7 @@ Note: the `[^]` symbol stands for matching multiple lines.
 ### hash data
 
 https://github.com/blueimp/JavaScript-MD5
+
+### build tools vs npm scripts, why not both?
+
+http://engineering.hobsons.com/2015/06/26/build-tools-vs-npm-scripts-why-not-both/
