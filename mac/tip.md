@@ -43,3 +43,8 @@ http://unix.stackexchange.com/questions/94837/having-trouble-uncompressing-a-few
 >Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
 
 run command `sudo xcodebuild -license` or directly open xcode and agree the agreement
+
+* get info of video files
+
+    ffmpge -i video_file_name
+

@@ -70,6 +70,18 @@ mongodb 安装完成之后，新打开一个终端标签，输入 mongo，自动
 mongoimport -h 127.0.0.1:3001 --db users --collection contacts --file contacts.json
 ```
 
+* 直接访问本地 mongodb 数据库中的 meteor collection, 也得保证 meteor 项目是运行着的
+
+```
+$ mongo 127.0.0.1:3001/meteor
+```
+
+* 如何在服务器端访问 mongodb 数据库的 meteor collection
+
+```
+server@aliyun:~$ mongo 127.0.0.1:27017/meteor
+```
+
 ### mongo shell quick reference
 
 <http://docs.mongodb.org/manual/reference/program/mongo/>

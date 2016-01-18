@@ -58,3 +58,4 @@ Expected output:
 In order to have daily backups available in case something goes wrong, we can optionally install a simple command as a daily cron job. Create a file /etc/cron.d/mongodb-backup:
 
     @daily root mkdir -p /var/backups/mongodb; mongodump --db todos --out /var/backups/mongodb/$(date +'\%Y-\%m-\%d')
+
