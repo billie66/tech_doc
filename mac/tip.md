@@ -48,3 +48,13 @@ run command `sudo xcodebuild -license` or directly open xcode and agree the agre
 
     ffmpge -i video_file_name
 
+* make gif file using licecap
+
+http://www.cockos.com/licecap/
+
+* cp hidden files
+
+    cp -rf src/demo/. dest/demo
+
+
+

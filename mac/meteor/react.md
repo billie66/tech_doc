@@ -25,3 +25,8 @@ http://busypeoples.github.io/post/react-component-lifecycle/
 
 Any DOM interactions should always happen in this phase not inside the render method.
 in this phase 指的是 componentDidMount
+
+### reference
+
+* https://medium.com/@goatslacker/react-0-13-x-and-autobinding-b4906189425d#.sybzccthu
+

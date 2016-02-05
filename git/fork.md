@@ -51,3 +51,8 @@ Delete the compass branch on the github:
 ### Check commits history of a contributed project
 
   https://github.com/happypeter/happycasts/commits?author=billie66
+
+### clone single branch
+
+    git clone -b mybranch --single-branch git://sub.domain.com/repo.git
+
