@@ -1,3 +1,9 @@
+###  在生产环境下，启动应用
+
+```
+meteor run --production
+```
+
 ### enable check API for meteor v1.2.1
 
 ```
@@ -42,9 +48,13 @@ run command `meteor update` to update, the process was easy and quick, serveral
 packages were added, like hot-code-push, meteor-base, mobile-experience,
 standard-minifiers, and meteor-platform was removed.
 
+### meteor alert
+
+* <http://julian.io/how-to-use-the-meteor-salert-package-with-react/>
+
 ### upload image
 
-<https://medium.com/@victorleungtw/how-to-upload-files-with-meteor-js-7b8e811510fa>
+* <https://medium.com/@victorleungtw/how-to-upload-files-with-meteor-js-7b8e811510fa>
 
 ### form validation
 
@@ -61,11 +71,11 @@ standard-minifiers, and meteor-platform was removed.
 
 ### docs
 
-<https://adilapapaya.wordpress.com/2014/03/12/things-i-wish-someone-told-me-when-i-first-started-learning-meteor-js/>
+* <https://adilapapaya.wordpress.com/2014/03/12/things-i-wish-someone-told-me-when-i-first-started-learning-meteor-js/>
 
-<http://stackoverflow.com/questions/15374066/importing-a-json-file-in-meteor>
+* <http://stackoverflow.com/questions/15374066/importing-a-json-file-in-meteor>
 
-<http://dweldon.silvrback.com/get-text>
+* <http://dweldon.silvrback.com/get-text>
 
-<http://stackoverflow.com/questions/28105957/meteor-and-the-private-directory>
+* <http://stackoverflow.com/questions/28105957/meteor-and-the-private-directory>
 
