@@ -16,7 +16,7 @@
 
 ### coffeescript syntax highlighting
 
-To install [package control](https://packagecontrol.io/) for Sublime Text 2, type ctrl + ` to
+To install [package control](https://packagecontrol.io/) for Sublime Text, type ctrl + ` to
 open the Python console and paste [the code](https://packagecontrol.io/installation#st2) into it.
 
 After installing the package manager and restarting the editor:
@@ -31,3 +31,19 @@ Then reopen the coffeescript file, the code will be highlighted.
 
 The default save location is the location of the last active saved file.
 
+### create a symbol link
+
+```
+cd ~/bin
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
+```
+
+### installed location
+
+```
+cd Library/Application\ Support
+```
+
+### support jsx format
+
+install `babel-sublime` package
