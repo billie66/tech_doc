@@ -4,14 +4,6 @@
 meteor run --production
 ```
 
-### enable check API for meteor v1.2.1
-
-```
-meteor add check
-meteor add ejson
-```
-usage `check(postId, Number)`
-
 ### manage packages
 
 * install a package `meteor add package`
@@ -34,19 +26,11 @@ Within the command line, run the following command to remove this package:
 
 As a result, the data from the `Lists` collection will not show up.
 
-###
-
 ### unique template name
 
 ```
 Uncaught Error: There are multiple templates named 'navigation'. Each template needs a unique name.
 ```
-
-### update to meteor 1.2.0.1
-
-run command `meteor update` to update, the process was easy and quick, serveral
-packages were added, like hot-code-push, meteor-base, mobile-experience,
-standard-minifiers, and meteor-platform was removed.
 
 ### meteor alert
 
