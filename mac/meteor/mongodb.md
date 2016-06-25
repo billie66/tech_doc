@@ -109,6 +109,60 @@ $ mongo 127.0.0.1:3001/meteor
 server@aliyun:~$ mongo 127.0.0.1:27017/meteor
 ```
 
+### 建议使用 mongodump 备份（导出）数据
+
+```
+mongodump -h 127.0.0.1 --port 27017 -d chat -c users
+```
+
+会在当前目录下生成一个 `dump/chat` 目录，存放从 `chat` 数据库 `users` 集合中导出的数据。
+
+### 建议使用 mongorestore 导入数据
+
+```
+mongorestore --drop -h 127.0.0.1 --port 3001 -d meteor -c users ./meteor/users.bson
+```
+
+`-h` 默认值为 `localhost:27017`，`--port` 默认值为 27017
+
+在服务器产品环境下，端口号为 `27017`，数据库名为 `chat`:
+
+```
+mongorestore --drop -h 127.0.0.1 --port 27017 -d chat -c users ./meteor/users.bson
+```
+
+[mongorestore](https://docs.mongodb.com/manual/reference/program/mongorestore/)
+
+### 创建数据库
+
+在 MongoDB 的 shell 命令行中操作：
+
+```
+use database_name
+```
+
+### 添加记录
+
+```
+db.users.insert({name: 'billie'})
+```
+
+### 删除数据库
+
+比如说，一个名为 `bird` 的数据库，首先打开 MongoDB 的 shell 命令行，
+
+```
+mongo
+```
+
+然后 MongoDB 的 shell 命令行中操作：
+
+```
+show dbs
+use bird
+db.dropDatabase()
+```
+
 ### mongo shell quick reference
 
 <http://docs.mongodb.org/manual/reference/program/mongo/>

@@ -56,5 +56,11 @@ http://www.cockos.com/licecap/
 
     cp -rf src/demo/. dest/demo
 
+* clear mails from system
+
+```
+sudo echo -n > /var/mail/<username>
+```
+
 
 

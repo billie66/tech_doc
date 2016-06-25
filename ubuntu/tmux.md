@@ -43,3 +43,9 @@ Attach to an session available when tmux is started. very excellent!
 
   tmux attach-session
 
+Attach to a specific client, for example, client 1
+
+```
+tmux a -t 1
+```
+
