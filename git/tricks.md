@@ -1,4 +1,4 @@
-### change filenames from uppercase to lowercase
+### change filename from uppercase to lowercase on case-insensitive file system
 
 ```
   git mv --force Dog.md dog.md

@@ -1,11 +1,10 @@
-### the key property
+### reselect
 
->React always unmounts and remounts components when its key changes—that's the
-purpose of that property, to help React maintain an "identity" of a
-component. In particular, it's required when using React's CSS transitions,
-because the only way to animate out one component and animate in another is
-to have them be separate DOM nodes.
+<http://blog.rangle.io/react-and-redux-performance-with-reselect/>
 
-### the component lifecycle of react router
+### inline style
 
-https://github.com/reactjs/react-router/blob/master/docs/guides/ComponentLifecycle.md
+https://github.com/callemall/material-ui/issues/4066
+
+https://github.com/oliviertassinari/a-journey-toward-better-style
+

@@ -33,19 +33,35 @@ following key combination to control the session. More info to check `man tmux`
 
          q      Briefly display pane indexes.
 
-### commands
+### command line
 
-Detach a client after, run the command below to activate the client.
+# tmux shortcuts & cheatsheet
 
-  tmux attach
+start new:
 
-Attach to an session available when tmux is started. very excellent!
+  tmux
 
-  tmux attach-session
+start new with session name:
 
-Attach to a specific client, for example, client 1
+  tmux new -s myname
 
-```
-tmux a -t 1
-```
+attach:
+
+  tmux a  #  (or at, or attach)
+
+attach to named:
+
+  tmux a -t myname
+
+list sessions:
+
+  tmux ls
+
+kill session:
+
+  tmux kill-session -t myname
+
+Kill all the tmux sessions:
+
+  tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill 
 

@@ -163,6 +163,11 @@ use bird
 db.dropDatabase()
 ```
 
+### 用 javascript 语言编写 mongo shell 脚本
+
+<https://docs.mongodb.com/manual/tutorial/write-scripts-for-the-mongo-shell/>
+
+
 ### mongo shell quick reference
 
 <http://docs.mongodb.org/manual/reference/program/mongo/>
