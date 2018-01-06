@@ -40,7 +40,7 @@ nginx -t -c /etc/nginx/nginx.conf
 重新启动 nginx
 
 ```
-sudo systemctl start renginx
+sudo systemctl restart nginx
 ```
 
 查看 nginx 运行状态
