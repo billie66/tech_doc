@@ -1,3 +1,16 @@
-http://stackoverflow.com/questions/165779/are-the-put-delete-head-etc-methods-available-in-most-web-browsers
+### 静态网站配置 Nginx
 
-http://programmers.stackexchange.com/questions/114156/why-are-there-are-no-put-and-delete-methods-on-html-forms
+找不到的页面，显示自己设计的页面内容，而不是 Nginx 默认的404页面样式
+
+```
+server {}
+  listen 80;
+  server_name your_domain_name;
+  root   /your_file_path;
+  location / {
+    try_files $uri $uri/ /404.html;
+  }
+}
+```
+
+$uri 加载存在的文件，$uri/ 加载存在的目录，不存在的文件则加载 /404.html 页面，响应200状态码

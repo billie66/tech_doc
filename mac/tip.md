@@ -28,9 +28,16 @@ keyboard shortcut for Zoom be `shift+command+m`
     $ file font.7z
     font.7z: 7-zip archive data, version 0.3
     $ brew install p7zip
-    $ 7z e -ofont font.7z
+    $ 7z x -ofont font.7z
 
 `-ofont` output directory name is `font`
+`x` keep the original file path
+
+* convert encoding format
+
+    $ iconv -f big5 -t utf8 input_file_name > output_file_name
+
+the traditional Chinese uses big5 encoding format
 
 * uncompress rar archive data
 
