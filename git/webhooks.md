@@ -42,6 +42,8 @@ curl -u "your_username" -i
 https://api.github.com/repos/xxx/xxx/hooks
 ```
 
+curl -u happypeter -i https:/api.github.com/repos/happypeter/haoduoshipin/hooks
+
 - 删除一个 hook
 
 接口定义：
@@ -60,4 +62,3 @@ https://api.github.com/repos/xxx/xxx/hooks/xxx
 ### 参考
 
 https://developer.github.com/webhooks/
-
