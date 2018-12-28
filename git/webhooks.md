@@ -27,6 +27,8 @@ data.json 文件内容：
 }
 ```
 
+curl -u happypeter -d "@data.json" -X POST https:/api.github.com/repos/happypeter/ncourse/hooks
+
 - 列出所有的 hooks
 
 接口定义：

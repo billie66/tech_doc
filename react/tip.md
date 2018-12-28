@@ -50,13 +50,11 @@ static 生命周期方法不能使用 this 关键字
 
   一开始，这段代码看起来没啥问题。但实际上是有问题的，当 EmailInput 组件的父组件重新渲染的时候，你在输入框中写入的内容会被清空，显示最初的 email 值
 
-- getSnapshotBeforeUpdate
-
 ### React 组件的生命周期
 
 - 挂载（Mounting)
   把 React 组件加载到 DOM 上
-  constructor（设置组件最初的状态） -> getDerivedStateFromProps -> render（ React 更新 DOM 和 refs） -> componentDidMount（与 DOM 交互，调用 API）
+  constructor（设置组件最初的状态） -> getDerivedStateFromProps -> render -> React 更新 DOM 和 refs -> componentDidMount（与 DOM 交互，调用 API）
 
 - 更新（Updating)
   导致组件更新的操作：新的 props，setState(), forceUpdate()
@@ -68,4 +66,6 @@ static 生命周期方法不能使用 this 关键字
 - 卸载 (Unmounting)
   componentWillUnmount
 
-### 什么是 derived state
+### demo
+
+https://codesandbox.io/s/m4km18q38j
