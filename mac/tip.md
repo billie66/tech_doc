@@ -69,5 +69,19 @@ http://www.cockos.com/licecap/
 sudo echo -n > /var/mail/<username>
 ```
 
+### using convert commnad to compress image size
 
+`convert` utility is installed as part of `ImageMagick`, which can be
+installed by Homebrew.
 
+```
+brew install imagemagick
+```
+
+then, you can use `convert` to compress images
+
+```
+convert big_img.jpg -resize 50% small_img.jpg
+```
+
+`big_img.jpg` is the original file, `small_img.jpg` is the output file
