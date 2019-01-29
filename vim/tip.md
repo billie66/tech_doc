@@ -57,3 +57,8 @@ show the hidden characters in vim, using command `:set list`, and `:set nolist` 
 #### Show hidden characters
 
   :set list
+
+#### search and replace globally
+
+  :%s/old/new/g
+
