@@ -43,7 +43,7 @@ Fixed the error as follows:
 
 ### cann't access localhost
 
-fixed: flush DNS cache on MacOs 10.10.4 and above
+fixed: flush DNS cache, run below command on MacOs 10.10.4 and above
 
 ```
 sudo killall -HUP mDNSResponder
