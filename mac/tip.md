@@ -85,3 +85,18 @@ convert big_img.jpg -resize 50% small_img.jpg
 ```
 
 `big_img.jpg` is the original file, `small_img.jpg` is the output file
+
+### remove tig warning
+
+```
+➜  ssr git:(master) tig
+tig warning: /usr/local/etc/tigrc:90: status-untracked-dirs has been renamed
+to status-show-untracked-dirs
+tig warning: Errors while loading /usr/local/etc/tigrc.
+➜  ssr git:(master) tig -v
+tig version 2.3.3
+➜  ssr git:(master) cp /usr/local/opt/tig/share/tig/examples/tigrc
+/usr/local/etc/tigrc
+➜  ssr git:(master) tig
+➜  ssr git:(master)
+```
